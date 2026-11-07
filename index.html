@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c10">
+  <meta name="description" content="ORDER — O Pecado da Misericórdia. Um prólogo solo de investigação e horror psicológico com cartas.">
+  <title>ORDER — O Pecado da Misericórdia</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" aria-live="polite"></div>
+  <noscript><div style="color:white;font-family:Arial,sans-serif;text-align:center;padding:3rem">Ative o JavaScript no navegador para iniciar o ORDER.</div></noscript>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="cinema-light" aria-hidden="true"></div>
+  <div id="cinema-fade" aria-hidden="true"></div>
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <form method="dialog"><h2 id="settings-title">Configurações</h2>
+      <label for="volume">Volume dos efeitos</label><input id="volume" type="range" min="0" max="1" step="0.05" value="0.45">
+      <label for="text-speed">Intervalo entre letras</label><input id="text-speed" type="range" min="10" max="65" value="32"><small>Menor intervalo: digitação mais rápida.</small>
+      <p>EFEITOS AUTO respeita a preferência de movimento do sistema. EFEITOS ON permite ativar as animações.</p>
+      <button class="btn btn-primary">VOLTAR AO JOGO</button>
+    </form>
+  </dialog>
+  <script>
+    function showStartupError(message) { const panel=document.createElement('div');panel.className='startup-error';panel.setAttribute('role','alert');const title=document.createElement('h1');title.textContent='ORDER encontrou uma falha';const detail=document.createElement('p');detail.textContent=message;const help=document.createElement('p');help.textContent='Mantenha index.html, os arquivos JavaScript (incluindo battle-fx.js), style.css, Fonts e assets na mesma pasta. Recarregue a página. Consulte o Console do navegador para diagnóstico.';panel.append(title,detail,help);document.body.append(panel) }
+    window.addEventListener('error',e=>{if(e.message)showStartupError(e.message);else if(e.target.tagName==='SCRIPT')showStartupError('Não foi possível carregar '+e.target.getAttribute('src'))},true);
+    window.addEventListener('unhandledrejection',e=>showStartupError(String(e.reason?.message||e.reason)));
+  </script>
+  <script src="animations.js" defer></script>
+  <script src="dev.js" defer></script>
+  <script src="story.js" defer></script>
+  <script src="investigation.js" defer></script>
+  <script src="combat-rules.js" defer></script>
+  <script src="sound.js" defer></script>
+  <script src="battle-fx.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
