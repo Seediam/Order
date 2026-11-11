@@ -384,3 +384,5 @@ body.hells #app{background:radial-gradient(ellipse at 50% 40%,#4a0f24,#14050c 60
 .back-book .cb-cover.back-cover-face{transform:translateZ(14px)}
 .back-cover-face p{position:relative;bottom:auto;left:auto;right:auto;letter-spacing:0;text-transform:none}
 .back-book{animation:none}
+
+.end-clues{font-size:18px!important;color:#e7c9d6!important}.end-clues b{color:var(--rose)}
