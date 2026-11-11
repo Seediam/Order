@@ -386,3 +386,46 @@ body.hells #app{background:radial-gradient(ellipse at 50% 40%,#4a0f24,#14050c 60
 .back-book{animation:none}
 
 .end-clues{font-size:18px!important;color:#e7c9d6!important}.end-clues b{color:var(--rose)}
+/* v3: textos grandes se ajustam ao tamanho do quadro */
+.sfx{font-size:min(calc(var(--ph)*.07),calc(150cqw / var(--n)),26cqh);max-width:92cqw;white-space:nowrap}
+.sfx.small{font-size:min(calc(var(--ph)*.026),calc(150cqw / var(--n)))}
+.pbig b{font-size:min(calc(var(--ph)*.062),calc(140cqw / var(--n)),22cqh)}
+
+/* anotações nas margens pretas em volta do livro */
+.notes-wrap{display:none}
+.wide-margins .notes-wrap{display:block}
+.mnotes{position:absolute;top:calc((100% - var(--ph))/2 + 30px);width:min(250px,calc(50vw - var(--pw) - 44px));display:grid;gap:22px;z-index:4;pointer-events:none}
+.mnotes.left{right:calc(50% + var(--pw) + 26px)}
+.mnotes.right{left:calc(50% + var(--pw) + 26px)}
+.mnote{position:relative;padding:16px 16px 14px;transform:rotate(var(--r));box-shadow:0 12px 26px rgba(0,0,0,.65);font:600 15px/1.35 var(--body);animation:noteIn .5s ease-out both}
+@keyframes noteIn{from{opacity:0;translate:0 10px}}
+.mnote .tape{position:absolute;top:-10px;left:50%;width:64px;height:20px;background:rgba(240,225,180,.7);transform:translateX(-50%) rotate(-3deg)}
+.mnote b{display:block;margin-bottom:8px;font:700 13px/1.1 var(--title);letter-spacing:.06em}
+.mnote p{margin:0 0 5px}.mnote em{font-style:normal;color:#7a1c3c;font-weight:700}
+.mnote.paper{background:linear-gradient(180deg,#f3e8d4,#e1cfae);color:#2a1a10}
+.mnote.paper b{color:#7a1c3c}
+.mnote.yellow{background:linear-gradient(180deg,#f6e7a8,#e7d184)}
+.mnote.dark{background:rgba(20,10,16,.85);border:1px solid rgba(255,134,200,.3);color:#d9c6d0;font-size:14px}
+.mnote.dark b{color:var(--rose)}
+.mnote dl{margin:0;display:grid;gap:2px}.mnote dt{font:700 12px var(--label);letter-spacing:.12em;color:#7a1c3c;margin-top:5px}.mnote dd{margin:0;font-size:14px}
+.mnote ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14px}
+.mnote li.lost{color:#8a3a3a;text-decoration:line-through;text-decoration-color:rgba(138,58,58,.6)}
+.mnote li.ok{color:#2a3a1a}
+.mnote .sig{margin-top:10px;padding-top:6px;border-top:1px solid #a88b70;font:italic 700 19px var(--body)}
+.mnote .sig small{display:block;font:400 10px var(--label);letter-spacing:.14em;color:#7a1c3c;font-style:normal}
+/* v4: nada vaza, nada se sobrepõe */
+.phead{container-type:inline-size}
+.phead b{font-size:min(calc(var(--ph)*.026),calc(88cqw / var(--n)))}
+.sfx{font-size:min(calc(var(--ph)*.07),calc(125cqw / var(--n)),24cqh)}
+.pbig{padding:5%}
+.pbig b{font-size:min(calc(var(--ph)*.062),calc(125cqw / var(--n)),18cqh)}
+.pbig small{font-size:min(calc(var(--ph)*.022),5.5cqw,7cqh)}
+.pdoc b{font-size:min(calc(var(--ph)*.019),5.5cqh)}
+.pdoc p{font-size:min(calc(var(--ph)*.0175),5cqh,4.6cqw);margin:1px 0}
+.pdoc{padding:3% 4%;max-height:84%}
+.bal.at-ml{top:38%;left:4%}
+.phead{display:grid;gap:2px;align-items:end}
+.phead span{max-width:none}
+.spread-r .phead{justify-items:end}
+.sfx.at-tr{right:9%;top:9%}.sfx.at-br{right:9%;bottom:11%}.sfx.at-bl{left:9%;bottom:11%}
+.pbig b{font-size:min(calc(var(--ph)*.062),calc(100cqw / var(--n)),18cqh)}
