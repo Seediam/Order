@@ -37,8 +37,12 @@ const Sound=(()=>{let ac=null,rain=null,rainGain=null,music=null;
   if(!rain){const len=a.sampleRate*6,b=a.createBuffer(2,len,a.sampleRate);for(let ch=0;ch<2;ch++){const d=b.getChannelData(ch);let b0=0,b1=0,b2=0;for(let i=0;i<len;i++){const w=Math.random()*2-1;b0=.99765*b0+w*.099;b1=.963*b1+w*.2965;b2=.57*b2+w*1.0526;d[i]=(b0+b1+b2+w*.18)*.05}for(let k=0;k<1500;k++){const at=Math.floor(Math.random()*len),amp=.04+Math.random()*.2,dec=.0015+Math.random()*.005,n=Math.floor(a.sampleRate*dec*6),f=1800+Math.random()*4000;let ph=0;for(let j=0;j<n&&at+j<len;j++){d[at+j]+=Math.sin(ph)*Math.exp(-j/(a.sampleRate*dec))*amp;ph+=6.283*f/a.sampleRate}}for(let i=0;i<2000;i++){d[i]*=i/2000;d[len-1-i]*=i/2000}}
    rain=a.createBufferSource();rain.buffer=b;rain.loop=true;const hp=a.createBiquadFilter();hp.type='highpass';hp.frequency.value=380;rainGain=a.createGain();rainGain.gain.value=0;rain.connect(hp);hp.connect(rainGain);rainGain.connect(a.destination);rain.start()}
   rainGain.gain.setTargetAtTime(level*.5,a.currentTime,.8)}
- function setMusic(){if(!S.audio||S.music<=0){if(music)music.pause();return}if(!music){music=new Audio('assets/background_music.mp4');music.loop=true;music.volume=0}music.volume=Math.min(1,S.music);if(music.paused){const p=music.play();p&&p.catch(()=>{})}}
- document.addEventListener('pointerdown',()=>{ctx();setMusic()},{once:false});
+ function setMusic(){if(!S.audio||S.music<=0){if(music)music.pause();return}if(!music){music=new Audio('assets/background_music.mp4');music.loop=true;music.preload='auto';music.setAttribute('playsinline','');music.volume=0}music.volume=Math.min(1,S.music);if(music.paused){const p=music.play();p&&p.catch(()=>{})}}
+ /* desbloqueio de áudio: o Safari/iOS só aceita toque completo (touchend/click), não pointerdown; toca um silêncio para liberar o contexto */
+ function unlock(){const a=ctx();if(a&&!unlock.done){try{const s=a.createBufferSource();s.buffer=a.createBuffer(1,1,22050);s.connect(a.destination);s.start(0);unlock.done=true}catch{}}setMusic()}
+ try{if(navigator.audioSession)navigator.audioSession.type='playback'}catch{}
+ for(const ev of['pointerdown','touchend','click','keydown'])document.addEventListener(ev,unlock,{passive:true});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){music&&music.pause()}else if(S.audio)setMusic()});
  return{...fx,setRain,setMusic,play:(t)=>fx[t]?.()};
 })();
 window.AudioEngine={play:t=>Sound.play(t==='roll'?'paper':t)};
