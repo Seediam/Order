@@ -8,6 +8,10 @@ import {
   type Scene,
   type Sector,
   type Card,
+  type Attributes,
+  type Prop,
+  type PropKind,
+  type Material,
 } from "../shared/types";
 export class RuleError extends Error {}
 export function requireRule(test: unknown, message: string): asserts test {
@@ -90,6 +94,16 @@ export function prepare(c: Character, preserveBanished = false) {
   draw(c, 3);
   draw(c, 2, true);
 }
+const SECTOR_ATTRIBUTES: Record<Sector, Attributes> = {
+  "INCIDÊNCIA": { FOR: 2, VIG: 2, INT: 1, AGI: 1, PRE: 1 },
+  "RELAÇÃO": { FOR: 1, VIG: 1, INT: 1, AGI: 1, PRE: 3 },
+  "SOCIALISTA": { FOR: 1, VIG: 2, INT: 1, AGI: 1, PRE: 2 },
+  "JUSTIÇA": { FOR: 1, VIG: 1, INT: 2, AGI: 1, PRE: 2 },
+  "DOUTRINA": { FOR: 1, VIG: 1, INT: 3, AGI: 1, PRE: 1 },
+};
+export function defaultAttributes(sector: Sector): Attributes {
+  return { ...(SECTOR_ATTRIBUTES[sector] || { FOR: 1, VIG: 1, INT: 2, AGI: 2, PRE: 1 }) };
+}
 export function newCharacter(
   ownerId: string,
   name: string,
@@ -106,6 +120,7 @@ export function newCharacter(
     hidden: false,
     portrait: "",
     sin: "Apostador",
+    attributes: defaultAttributes(sector),
     age: 32,
     story: "",
     death: "",
@@ -164,6 +179,8 @@ export function newScene(
     blocked: [],
     doors: [],
     drawings: [],
+    tiles: {},
+    props: [],
     dialogues: [
       {
         id: randomUUID(),
@@ -421,6 +438,8 @@ export function beginTurn(c: Character) {
 /* Migração: campanhas criadas com o catálogo demonstrativo antigo recebem as cartas reais e decks prontos. */
 const LEGACY_CARD = /^(passo|defesa|corte|cuidados|questionamento|[0-4]-[0-5])$/;
 export function migrateCards(s: CampaignState) {
+  for (const c of s.characters) if (!c.attributes) c.attributes = defaultAttributes(c.sector);
+  for (const sc of s.scenes) if (!sc.props && sc.background === "/art/order/backgrounds/church-map.webp") { sc.props = churchProps(); sc.tiles = churchTiles(); }
   if (s.cards.some((c) => c.id === "U01")) return false;
   s.cards = [
     ...structuredClone(catalog),
@@ -448,6 +467,33 @@ const CHURCH_ROOMS: { name: string; rect: number[]; doors: number[][]; image: st
   { name: "Corredor dos fundos", rect: [19,14,23,20], doors: [[20,13],[18,16]], image: "/art/order/backgrounds/corridor.png", text: "Riscos antigos na madeira, à altura das mãos." },
   { name: "Pátio / abrigo da criança", rect: [24,14,30,21], doors: [[27,13]], image: "/art/order/backgrounds/courtyard.png", text: "Uma menina atrás do banco, com um desenho contra o peito." },
 ];
+/* Mobília da igreja para a vista isométrica (mesmas casas da planta). */
+export function churchProps(): Prop[] {
+  const P = (kind: PropKind, x: number, y: number, rot: 0 | 1 = 0): Prop => ({ id: randomUUID(), kind, x, y, rot });
+  return [
+    P("mesa", 7, 3), P("cadeira", 7, 4), P("estante", 5, 1), P("estante", 6, 1), P("vela", 9, 1),
+    P("altar", 16, 1), P("altar", 17, 1), P("cruz", 16, 0), P("vela", 15, 1), P("vela", 18, 1),
+    ...[4, 6, 8, 10].flatMap((y) => [P("banco", 14, y), P("banco", 15, y), P("banco", 18, y), P("banco", 19, y)]),
+    P("pilar", 13, 3), P("pilar", 20, 3), P("pilar", 13, 9), P("pilar", 20, 9),
+    P("armario", 27, 1), P("caixa", 23, 2), P("espelho", 28, 4), P("vela", 25, 3),
+    P("estante", 2, 7), P("estante", 3, 7), P("estante", 4, 7), P("mesa", 5, 10), P("cadeira", 5, 11), P("caixa", 2, 12),
+    P("cadeira", 26, 9), P("cadeira", 28, 9), P("vela", 27, 11), P("porta", 30, 10, 1),
+    P("cama", 2, 16), P("armario", 5, 14), P("caixa", 3, 19), P("espelho", 6, 19),
+    P("mesa", 10, 16), P("mesa", 11, 16), P("cadeira", 9, 16, 1), P("cadeira", 12, 16, 1), P("cadeira", 10, 17), P("cadeira", 11, 17),
+    P("barril", 19, 19), P("barril", 20, 19), P("caixa", 23, 18),
+    P("banco", 26, 18), P("barril", 29, 15), P("vela", 25, 20),
+  ];
+}
+export function churchTiles(): Record<string, Material> {
+  const t: Record<string, Material> = {};
+  const fill = (x1: number, y1: number, x2: number, y2: number, m: Material) => { for (let y = y1; y <= y2; y++) for (let x = x1; x <= x2; x++) t[`${x},${y}`] = m; };
+  fill(16, 0, 17, 12, "tapete");
+  fill(23, 7, 30, 12, "roxo");
+  fill(24, 14, 30, 21, "grama");
+  fill(19, 14, 23, 20, "terra");
+  fill(1, 14, 7, 20, "vermelho");
+  return t;
+}
 export function churchScene(): Scene {
   const scene = newScene("Santa Cecília · Planta (Clue)");
   Object.assign(scene, { width: 32, height: 24, grid: 40, gridOpacity: 0.12, background: "/art/order/backgrounds/church-map.webp", description: "Corredores, portas e nove salas. Role o d6 para andar como no Clue.", dialogues: [] });
@@ -473,5 +519,7 @@ export function churchScene(): Scene {
   }
   for (let y = 0; y < scene.height; y++)
     for (let x = 0; x < scene.width; x++) if (!walkable.has(key(x, y))) scene.blocked.push({ x, y });
+  scene.props = churchProps();
+  scene.tiles = churchTiles();
   return scene;
 }

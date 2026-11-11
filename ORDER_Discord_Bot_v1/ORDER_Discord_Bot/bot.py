@@ -29,6 +29,9 @@ PROMPT_FILE = BASE_DIR / "PROMPT.txt"
 TOKEN = os.environ.get("DISCORD_TOKEN", "").strip()
 GUILD_ID = os.environ.get("GUILD_ID", "").strip()
 REFERENCE_URL = os.environ.get("ORDER_REFERENCES_URL", "").strip()
+# Página-livro de registro (GitHub Pages). O botão do painel abre direto nela.
+REGISTRO_URL = os.environ.get("ORDER_REGISTRO_URL", "https://seediam.github.io/Order/registro.html").strip()
+OPENING = "*Agora é sua vez, de contar sua história sem ser nos olhares do outro.*"
 
 SECTORS = {
     "Incidência": "Resistência: sustenta a pressão e protege aliados.",
@@ -558,6 +561,7 @@ async def start_sheet(interaction: discord.Interaction):
     else:
         await interaction.response.send_message(
             "**ORDER • Registro de Searcher**\n"
+            f"{OPENING}\n\n"
             "Você morreu, mas seu contrato ainda não terminou. Selecione seu Setor para iniciar a ficha.\n\n"
             "As respostas são visíveis apenas para você e ficam salvas no bot.",
             view=SectorView(interaction.user.id), ephemeral=True,
@@ -630,10 +634,13 @@ async def send_prompt(interaction: discord.Interaction):
     prompt = render_prompt(sheet)
     instructions = (
         "**Seu prompt visual oficial de ORDER está pronto.**\n"
-        "Baixe o `.txt` e cole em um gerador de imagens. "
-        "**Anexe também as imagens de referência oficiais do ORDER**, conforme o prompt exige.\n"
+        "Baixe o `.txt` e **use o prompt em um ChatGPT Plus para criar seu personagem**: cole o texto e "
+        "**anexe as imagens de referência oficiais do ORDER**, conforme o prompt exige.\n"
+        "Depois, continue: envie a imagem com `/retrato_order` e confira tudo em `/minha_ficha`.\n"
         "Este bot **não cria a imagem automaticamente**."
     )
+    if REGISTRO_URL:
+        instructions += f"\nPasso a passo no livro de registro: {REGISTRO_URL}"
     if REFERENCE_URL:
         instructions += f"\nReferências oficiais: {REFERENCE_URL}"
     await interaction.response.send_message(
@@ -666,6 +673,9 @@ class PanelView(discord.ui.View):
     """Botões persistentes: funcionam após reiniciar o bot."""
     def __init__(self):
         super().__init__(timeout=None)
+        if REGISTRO_URL:
+            # Botão de link: não usa custom_id e continua valendo após reiniciar o bot.
+            self.add_item(discord.ui.Button(label="Abrir o livro de registro", url=REGISTRO_URL, emoji="📖", row=1))
 
     @discord.ui.button(label="Criar / retomar ficha", custom_id="order:panel:criar", style=discord.ButtonStyle.primary, emoji="✒️")
     async def create(self, interaction: discord.Interaction, button: discord.ui.Button):
@@ -789,11 +799,13 @@ async def painel_order(interaction: discord.Interaction):
     embed = discord.Embed(
         title="ORDER — CONTRATO DE ALMA",
         description=(
+            f"{OPENING}\n\n"
             "**Você morreu. Seu julgamento não terminou.**\n\n"
             "Crie seu **Searcher** com a orientação do bot:\n"
             "• Escolha um dos cinco Setores.\n"
             "• Defina identidade, pecado, aparência e história.\n"
-            "• Salve sua ficha e receba um prompt no estilo artístico oficial de ORDER.\n\n"
+            "• Salve sua ficha e receba um prompt no estilo artístico oficial de ORDER.\n"
+            "• Use o prompt em um ChatGPT Plus para criar seu personagem, e depois continue aqui.\n\n"
             "**Clique abaixo para começar.** Sua ficha será privada."
         ),
         color=0x611D37,

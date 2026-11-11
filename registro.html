@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07050a">
+  <title>ORDER — Registro de Searcher</title>
+  <meta name="description" content="Agora é sua vez, de contar sua história sem ser nos olhares do outro. Crie seu Searcher do ORDER.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ORDER">
+  <meta property="og:title" content="ORDER — Registro de Searcher">
+  <meta property="og:description" content="Agora é sua vez, de contar sua história sem ser nos olhares do outro.">
+  <meta property="og:url" content="https://seediam.github.io/Order/registro.html">
+  <meta property="og:image" content="https://seediam.github.io/Order/assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <style>
+    @font-face{font-family:'Cinzel Decorative';src:url('Fonts/CinzelDecorative-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+    @font-face{font-family:'Cinzel Decorative';src:url('Fonts/CinzelDecorative-Black.ttf') format('truetype');font-weight:900;font-display:swap}
+    @font-face{font-family:'IM Fell English SC';src:url('Fonts/IMFellEnglishSC-Regular.ttf') format('truetype');font-display:swap}
+    @font-face{font-family:'Cormorant Garamond';src:url('Fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');font-weight:300 700;font-display:swap}
+    @font-face{font-family:'Cormorant Garamond';src:url('Fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');font-style:italic;font-weight:300 700;font-display:swap}
+    :root{--ink:#1d1116;--paper:#f3e8d4;--blood:#a3122f;--rose:#ff86c8;--bone:#f4e9db;--title:'Cinzel Decorative',Georgia,serif;--label:'IM Fell English SC',Georgia,serif;--body:'Cormorant Garamond',Georgia,serif;color-scheme:dark}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#07050a;color:var(--bone);font-family:var(--body)}
+    body{min-height:100dvh;display:grid;place-items:center;padding:28px 16px;overflow-x:hidden;
+      background:radial-gradient(ellipse at 50% 35%,#2a1220 0%,#0c0609 58%,#050306 100%)}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px);animation:film 1.2s steps(3) infinite}
+    @keyframes film{50%{transform:translateY(1px)}}
+    canvas#rain{position:fixed;inset:0;pointer-events:none;z-index:0}
+    .stage{position:relative;z-index:1;width:min(1120px,100%);perspective:2200px}
+    .book{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:min(680px,calc(100dvh - 120px));transform-style:preserve-3d;animation:open 1.4s .2s cubic-bezier(.2,.8,.25,1) both}
+    @keyframes open{from{transform:rotateX(18deg) rotateY(-24deg) scale(.82);opacity:0}}
+    .page{position:relative;padding:clamp(22px,4vw,48px);color:var(--ink);background:radial-gradient(ellipse at 50% 38%,#f8efdd,#e9dbbd 70%,#d1bd96);overflow:hidden}
+    .page::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;background:repeating-linear-gradient(0deg,transparent 0 3px,#8a6a400f 3px 4px)}
+    .page.left{border-radius:8px 0 0 8px;box-shadow:inset -40px 0 50px -26px #5a3a2077,-10px 18px 40px #000d;display:flex;flex-direction:column}
+    .page.right{border-radius:0 8px 8px 0;box-shadow:inset 40px 0 50px -26px #5a3a2077,10px 18px 40px #000d}
+    .spine{position:absolute;left:50%;top:0;bottom:0;width:4px;transform:translateX(-50%);background:linear-gradient(90deg,#5a3a20,#24140b,#5a3a20);z-index:2}
+    /* folha que vira ao abrir */
+    .leaf{position:absolute;left:50%;top:0;width:50%;height:100%;transform-origin:0 50%;background:linear-gradient(90deg,#3b0d22,#14060d);border-radius:0 8px 8px 0;z-index:3;backface-visibility:hidden;display:grid;place-items:center;animation:turn 1.5s 1s cubic-bezier(.6,.05,.3,1) forwards;box-shadow:inset 0 0 0 10px #14060d,inset 0 0 0 12px #e5bd7766}
+    .leaf img{width:58%;filter:drop-shadow(0 0 18px #ff2f8e66)}
+    @keyframes turn{to{transform:rotateY(-180deg)}}
+    .eyebrow{font:400 12px/1.2 var(--label);letter-spacing:.26em;color:#7a1c3c;text-transform:uppercase}
+    .logo{align-self:flex-start;width:150px;margin:0 0 12px;padding:8px 14px;background:#120b10;box-shadow:3px 3px 0 #a3122f;transform:rotate(-1.5deg)}
+    h1{margin:14px 0 0;font:900 clamp(26px,3.3vw,42px)/1.12 var(--title);letter-spacing:.01em;min-height:3.4em}
+    h1 .cursor{display:inline-block;width:3px;height:.9em;margin-left:4px;background:var(--blood);vertical-align:-.08em;animation:blink .8s steps(2) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .lead{margin:14px 0 0;font:italic 600 clamp(19px,1.8vw,23px)/1.35 var(--body);color:#4a2a28;opacity:0;transition:opacity 1s}
+    .lead.on{opacity:1}
+    .portrait{position:relative;flex:1;min-height:180px;margin-top:18px;display:flex;justify-content:center;align-items:flex-end;gap:0}
+    .portrait img{height:100%;max-height:330px;object-fit:contain;filter:drop-shadow(4px 0 0 #f4e9db) drop-shadow(-4px 0 0 #f4e9db) drop-shadow(0 10px 14px #0007) grayscale(.35) contrast(1.05);opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}
+    .portrait img.on{opacity:1;transform:none}
+    .portrait img{max-width:52%}.portrait img+img{margin-left:-6%}
+    .portrait .q{position:absolute;top:8%;left:50%;transform:translateX(-50%) rotate(-3deg);font:900 74px var(--title);color:var(--blood);opacity:.18}
+    .steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:18px;counter-reset:s}
+    .steps li{position:relative;padding:12px 14px 12px 64px;background:#fffaf099;border:1.5px solid #2a1a10;box-shadow:4px 4px 0 #2a1a10;opacity:0;transform:translateX(18px) rotate(var(--r,0deg));transition:opacity .7s,transform .7s}
+    .steps li.on{opacity:1;transform:rotate(var(--r,0deg))}
+    .steps li::before{counter-increment:s;content:counter(s,upper-roman);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:40px;text-align:center;font:900 26px var(--title);color:var(--blood)}
+    .steps b{display:block;font:400 13px var(--label);letter-spacing:.18em;color:#7a1c3c;text-transform:uppercase;margin-bottom:3px}
+    .steps p{margin:0;font:600 clamp(16px,1.45vw,19px)/1.32 var(--body)}
+    .steps code{font:700 .9em ui-monospace,Consolas,monospace;background:#2a1a1012;padding:0 4px;border-radius:3px}
+    .gpt{display:inline-block;margin-top:6px;padding:3px 9px;background:#120b10;color:#f4e9db;font:400 11px var(--label);letter-spacing:.16em;transform:skewX(-10deg)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;opacity:0;transition:opacity .8s}
+    .actions.on{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:3px;font:400 13px var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:transform .15s,filter .15s}
+    .btn.primary{background:linear-gradient(180deg,#c3164f,#7d0d33);color:#fff;box-shadow:0 6px 16px #a3122f55}
+    .btn.ghost{border:1.5px solid #2a1a10;color:var(--ink)}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.1)}
+    .folio{position:absolute;bottom:12px;font:italic 14px var(--body);color:#6a4a40}
+    .page.left .folio{left:24px}.page.right .folio{right:24px}
+    .tape{position:absolute;top:6px;right:34px;width:84px;height:24px;background:#eadcb2bb;transform:rotate(4deg);z-index:2}
+    .skip{position:fixed;right:14px;bottom:12px;z-index:5;background:none;border:0;color:#a1919b;font:italic 15px var(--body);cursor:pointer;text-decoration:underline}
+    @media (max-width:820px){
+      .book{grid-template-columns:1fr;min-height:0}
+      .page.left{border-radius:8px 8px 0 0}.page.right{border-radius:0 0 8px 8px}
+      .spine,.leaf{display:none}
+      .portrait{min-height:200px}
+      h1{min-height:0}
+    }
+    @media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.leaf{display:none}}
+  </style>
+</head>
+<body>
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <main class="stage">
+    <div class="book">
+      <section class="page left">
+        <img class="logo" src="assets/web/logo.webp" alt="ORDER">
+        <span class="eyebrow">Registro de Searcher · Contrato em branco</span>
+        <h1 id="phrase" aria-label="Agora é sua vez, de contar sua história sem ser nos olhares do outro."><span id="typed"></span><span class="cursor"></span></h1>
+        <p class="lead" id="lead">Até aqui você leu a história de Elvira pelos olhos de quem a julgou. Agora o papel é seu, e a pena também.</p>
+        <div class="portrait" aria-hidden="true">
+          <span class="q">?</span>
+          <img src="assets/web/man-visual.webp" alt="">
+          <img src="assets/web/woman-visual.webp" alt="">
+        </div>
+        <span class="folio">i</span>
+      </section>
+      <section class="page right">
+        <i class="tape"></i>
+        <span class="eyebrow">Como escrever o seu capítulo</span>
+        <ol class="steps">
+          <li style="--r:-.6deg"><b>Abra sua ficha</b><p>No Discord, no canal <code>✒・criar-personagem</code>, clique em <em>Criar / retomar ficha</em> (ou use <code>/criar_ficha</code>). Escolha o Setor, o pecado, a aparência e escreva quem você foi em vida.</p></li>
+          <li style="--r:.5deg"><b>Dê um rosto ao seu Searcher</b><p>Clique em <em>Gerar prompt de arte</em> (ou <code>/prompt_order</code>) e baixe o arquivo <code>.txt</code>. Use o prompt em um <strong>ChatGPT Plus</strong> para criar seu personagem: cole o texto e anexe as imagens de referência oficiais do ORDER.</p><span class="gpt">ChatGPT Plus · criação de imagem</span></li>
+          <li style="--r:-.4deg"><b>Depois, continue</b><p>Volte ao Discord e envie a imagem com <code>/retrato_order</code>. Confira tudo em <code>/minha_ficha</code>. No dia da sessão, entre no Tabletop, crie seu Searcher e use <code>/vincular_tabletop</code> para levar a ficha até a mesa.</p></li>
+        </ol>
+        <div class="actions" id="actions">
+          <a class="btn primary" href="https://discord.gg/xVDAPBVTTz">Voltar ao Discord</a>
+          <a class="btn ghost" href="./">Ler o prólogo</a>
+        </div>
+        <span class="folio">ii</span>
+      </section>
+      <div class="spine"></div>
+      <div class="leaf" aria-hidden="true"><img src="assets/web/logo.webp" alt=""></div>
+    </div>
+  </main>
+  <button class="skip" id="skip" type="button">Mostrar tudo</button>
+  <script>
+    (()=>{
+      const phrase='Agora é sua vez, de contar sua história sem ser nos olhares do outro.';
+      const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const typed=document.getElementById('typed'),lead=document.getElementById('lead'),acts=document.getElementById('actions');
+      const skip=document.getElementById('skip'),steps=[...document.querySelectorAll('.steps li')],imgs=[...document.querySelectorAll('.portrait img')];
+      let i=0,timer=0,done=false;
+      function finish(){if(done)return;done=true;clearTimeout(timer);typed.textContent=phrase;lead.classList.add('on');imgs.forEach(e=>e.classList.add('on'));steps.forEach(e=>e.classList.add('on'));acts.classList.add('on');skip.hidden=true}
+      function reveal(){lead.classList.add('on');imgs.forEach((e,k)=>setTimeout(()=>e.classList.add('on'),300+k*250));steps.forEach((e,k)=>setTimeout(()=>e.classList.add('on'),900+k*650));setTimeout(()=>{acts.classList.add('on');done=true;skip.hidden=true},900+steps.length*650)}
+      function type(){if(done)return;typed.textContent=phrase.slice(0,++i);if(i<phrase.length){const ch=phrase[i-1];timer=setTimeout(type,ch===','||ch==='.'?420:46+Math.random()*40)}else reveal()}
+      if(reduced)finish();else timer=setTimeout(type,2300);
+      document.getElementById('skip').onclick=finish;
+      addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')finish()});
+      /* chuva leve */
+      const cv=document.getElementById('rain'),cx=cv.getContext('2d');let drops=[];
+      function size(){cv.width=innerWidth;cv.height=innerHeight;drops=Array.from({length:Math.floor(innerWidth*innerHeight/7000)},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,v:9+Math.random()*10,a:.06+Math.random()*.18}))}
+      function frame(){cx.clearRect(0,0,cv.width,cv.height);for(const d of drops){d.y+=d.v;d.x+=d.v*.18;if(d.y>cv.height){d.y=-20;d.x=Math.random()*cv.width}cx.strokeStyle=`rgba(220,210,235,${d.a})`;cx.beginPath();cx.moveTo(d.x,d.y);cx.lineTo(d.x-d.v*.18,d.y-d.v*1.4);cx.stroke()}requestAnimationFrame(frame)}
+      if(!reduced){size();addEventListener('resize',size);frame()}
+    })();
+  </script>
+</body>
+</html>

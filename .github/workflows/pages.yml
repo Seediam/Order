@@ -24,7 +24,7 @@ jobs:
       - name: Separar arquivos do jogo
         run: |
           mkdir -p _site
-          cp index.html manhwa.css manhwa.js manhwa-story.js dice3d.js .nojekyll _site/
+          cp index.html registro.html manhwa.css manhwa.js manhwa-story.js dice3d.js .nojekyll _site/
           cp -R assets _site/assets
           mkdir -p _site/Fonts
           cp Fonts/*.ttf Fonts/OFL.txt _site/Fonts/

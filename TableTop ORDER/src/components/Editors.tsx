@@ -23,11 +23,36 @@ import type {
   ViewState,
   Effect,
 } from "../../shared/types";
-import { SECTORS, SKILLS, SINS } from "../../shared/types";
+import { SECTORS, SKILLS, SINS, ATTRIBUTES, ATTRIBUTE_INFO, ATTRIBUTE_MAX, ATTRIBUTE_POINTS, type Attributes } from "../../shared/types";
 import { sectorInfo } from "../../shared/catalog";
 import { api, post } from "../api";
 import { DiscordLink } from "./DiscordLink";
 export type Perform = (action: Action) => Promise<boolean>;
+/** Ficha FOR · VIG · INT · AGI · PRE: 7 pontos, cada um de 0 a 3. */
+export function AttributeEditor({ value, onChange, disabled }: { value: Attributes; onChange?: (v: Attributes) => void; disabled?: boolean }) {
+  const total = ATTRIBUTES.reduce((n, a) => n + (value[a] ?? 0), 0), left = ATTRIBUTE_POINTS - total;
+  return (
+    <div className="attr-sheet">
+      <div className="attr-head"><span className="eyebrow">ATRIBUTOS</span><b className={left === 0 ? "ok" : "warn"}>{left === 0 ? "7/7 pontos" : left > 0 ? `faltam ${left}` : `sobram ${-left}`}</b></div>
+      <div className="attr-row">
+        {ATTRIBUTES.map((a) => (
+          <div className="attr-box" key={a} title={ATTRIBUTE_INFO[a].hint}>
+            <span className="attr-key">{a}</span>
+            <strong>{value[a] ?? 0}</strong>
+            <small>{ATTRIBUTE_INFO[a].name}</small>
+            {onChange && !disabled && (
+              <div className="attr-btns">
+                <button type="button" aria-label={`Diminuir ${ATTRIBUTE_INFO[a].name}`} disabled={(value[a] ?? 0) <= 0} onClick={() => onChange({ ...value, [a]: (value[a] ?? 0) - 1 })}><Minus size={12} /></button>
+                <button type="button" aria-label={`Aumentar ${ATTRIBUTE_INFO[a].name}`} disabled={(value[a] ?? 0) >= ATTRIBUTE_MAX || left <= 0} onClick={() => onChange({ ...value, [a]: (value[a] ?? 0) + 1 })}><Plus size={12} /></button>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+      <p className="attr-help">Some o atributo ao D20 nos testes. VIG também dá +1 de Vida máxima por ponto.</p>
+    </div>
+  );
+}
 export function CharacterCreator({
   perform,
   onClose,
@@ -119,6 +144,7 @@ export function CharacterSheet({
 }) {
   const [tab, setTab] = useState("identity"),
     [portrait, setPortrait] = useState(c.portrait),
+    [attributes, setAttributes] = useState<Attributes>(c.attributes || { FOR: 1, VIG: 1, INT: 2, AGI: 2, PRE: 1 }),
     [skills, setSkills] = useState(c.skills),
     [deck, setDeck] = useState(c.deck || []),
     [filter, setFilter] = useState(""),
@@ -141,6 +167,7 @@ export function CharacterSheet({
           story: f.get("story"),
           death: f.get("death"),
           skills,
+          attributes,
           weapon: f.get("weapon"),
           instrument: f.get("instrument") === "on",
         },
@@ -279,6 +306,7 @@ export function CharacterSheet({
               </div>
             </div>
           </div>
+          <AttributeEditor value={attributes} onChange={setAttributes} disabled={!own && !master} />
           <Field
             label={`Perícias principais · ${skills.length}/3 · Formação ${10 + skills.length * 2} cartas`}
           >

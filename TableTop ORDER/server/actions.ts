@@ -1,7 +1,7 @@
 import { isBundledArt, ORDER_ART } from '../shared/order-assets';
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
-import type {
+import type { Attribute,
   CampaignState,
   User,
   Action,
@@ -10,7 +10,7 @@ import type {
   Card,
   DiceRoll,
 } from "../shared/types";
-import { SECTORS, SKILLS } from "../shared/types";
+import { MATERIALS, PROPS, ATTRIBUTES, ATTRIBUTE_MAX, ATTRIBUTE_POINTS, SECTORS, SKILLS } from "../shared/types";
 import {
   beginTurn,
   clamp,
@@ -65,6 +65,7 @@ const choice = z.object({
   condition: z.enum(["always", "proofs", "moral"]),
   once: z.boolean(),
 });
+const SOLID_PROPS = new Set(["barril", "armario", "mesa", "caixa", "estante", "banco", "altar", "cama", "pilar", "espelho"]);
 const scenePatch = z.object({
   name: z.string().min(1).max(100).optional(),
   description: str.optional(),
@@ -105,6 +106,14 @@ const scenePatch = z.object({
     .max(100)
     .optional(),
   choices: z.array(choice).max(20).optional(),
+  tiles: z
+    .record(z.string().regex(/^d{1,2},d{1,2}$/), z.enum(MATERIALS))
+    .refine((t) => Object.keys(t).length <= 6400, "Mapa grande demais.")
+    .optional(),
+  props: z
+    .array(z.object({ id, kind: z.enum(PROPS), x: z.number().int().min(0).max(99), y: z.number().int().min(0).max(99), rot: z.union([z.literal(0), z.literal(1)]) }))
+    .max(500)
+    .optional(),
 });
 const effect = z.object({
   kind: z.enum([
@@ -298,9 +307,17 @@ export function applyAction(
           skills: z.array(z.enum(SKILLS)).max(3).optional(),
           weapon: z.enum(["PISTOLA", "FACA", "NENHUMA"]).optional(),
           instrument: z.boolean().optional(),
+          attributes: z.object(Object.fromEntries(ATTRIBUTES.map((a) => [a, z.number().int().min(0).max(ATTRIBUTE_MAX)])) as Record<Attribute, z.ZodNumber>).optional(),
         })
         .parse(action.patch);
       requireRule(!s.combat.active, "Edite a ficha fora do combate.");
+      if (p.attributes) {
+        const total = ATTRIBUTES.reduce((n, a) => n + p.attributes![a], 0);
+        requireRule(total === ATTRIBUTE_POINTS, `Distribua exatamente ${ATTRIBUTE_POINTS} pontos entre FOR, VIG, INT, AGI e PRE (agora: ${total}).`);
+        const before = c.attributes?.VIG ?? 1;
+        c.maxHp = Math.max(1, c.maxHp + (p.attributes.VIG - before));
+        c.hp = clamp(c.hp + Math.max(0, p.attributes.VIG - before), c.maxHp);
+      }
       if (p.skills) formation(p.skills);
       Object.assign(c, p);
       prepare(c, true);
@@ -375,7 +392,10 @@ export function applyAction(
           scene(),
           c.position,
           target,
-          s.characters.filter((v) => v.id !== c.id).map((v) => v.position),
+          [
+            ...s.characters.filter((v) => v.id !== c.id).map((v) => v.position),
+            ...(scene().props || []).filter((p) => SOLID_PROPS.has(p.kind)).map((p) => ({ x: p.x, y: p.y })),
+          ],
         );
         requireRule(n !== null, "Passagem bloqueada.");
         if (s.combat.active) {
@@ -746,6 +766,7 @@ export function applyAction(
           sides: z.union([z.literal(6), z.literal(20)]),
           skill: z.string().max(40).optional(),
           training: z.boolean().optional(),
+          attribute: z.enum(ATTRIBUTES).optional(),
           difficulty: z.number().int().min(1).max(40).default(13),
         })
         .parse(action);
@@ -761,10 +782,13 @@ export function applyAction(
         c.formationDiscard.push(p.skill);
         bonus = 2;
       }
+      const attr = p.sides === 20 && p.attribute ? (c.attributes?.[p.attribute] ?? 0) : 0;
+      bonus += attr;
+      const attrText = attr || p.attribute ? ` + ${attr} ${p.attribute}` : "";
       const n = roll(p.sides);
       log(
         s,
-        `${c.name} · d${p.sides}: ${n}${bonus ? ` + ${bonus} Formação = ${n + bonus}` : ""}${p.sides === 20 ? ` · DT ${p.difficulty} · ${n === 20 || (n !== 1 && n + bonus >= p.difficulty) ? "sucesso" : "falha"}` : ""}${p.skill ? ` · ${p.skill}` : ""}`,
+        `${c.name} · d${p.sides}: ${n}${bonus - attr ? ` + ${bonus - attr} Formação` : ""}${p.sides === 20 ? attrText : ""}${bonus ? ` = ${n + bonus}` : ""}${p.sides === 20 ? ` · DT ${p.difficulty} · ${n === 20 || (n !== 1 && n + bonus >= p.difficulty) ? "sucesso" : "falha"}` : ""}${p.skill ? ` · ${p.skill}` : ""}`,
         "dice",
         c.name,
         [
@@ -772,8 +796,8 @@ export function applyAction(
             sides: p.sides,
             value: n,
             ok: p.sides === 20 ? n === 20 || (n !== 1 && n + bonus >= p.difficulty) : undefined,
-            label: `${c.name}${p.skill ? ` · ${p.skill}` : ""}`,
-            detail: p.sides === 20 ? `${n}${bonus ? ` + ${bonus} Formação` : ""} = ${n + bonus} contra DT ${p.difficulty}` : "",
+            label: `${c.name}${p.attribute ? ` · ${p.attribute}` : ""}${p.skill ? ` · ${p.skill}` : ""}`,
+            detail: p.sides === 20 ? `${n}${bonus - attr ? ` + ${bonus - attr} Formação` : ""}${attrText} = ${n + bonus} contra DT ${p.difficulty}` : "",
           },
         ],
       );

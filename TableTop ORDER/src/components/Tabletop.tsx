@@ -56,6 +56,7 @@ import {
   Eye,
   Trophy,
   ArrowRight,
+  Box,
 } from "lucide-react";
 import { api, post } from "../api";
 import { audio } from "../audio";
@@ -70,6 +71,8 @@ import {
   Modal,
 } from "./UI";
 import { Board, Minimap, type Tool } from "./Board";
+import { IsoBoard } from "./IsoBoard";
+import { PersonaMenu, CombatCallouts } from "./Combat";
 import {
   CardEditor,
   CardFace,
@@ -144,7 +147,15 @@ export function Tabletop({ id, onLeave }: { id: string; onLeave: () => void }) {
     [chat, setChat] = useState(""),
     [privacy, setPrivacy] = useState(false),
     [inspection, setInspection] = useState<string[]>([]),
-    [error, setError] = useState("");
+    [error, setError] = useState(""),
+    [isoView, setIsoView] = useState(() => { try { return localStorage.getItem("order:view") !== "plan"; } catch { return true; } }),
+    [folds, setFolds] = useState<Record<string, boolean>>(() => { try { return JSON.parse(localStorage.getItem("order:folds") || "") as Record<string, boolean>; } catch { return { left: true, right: false, hand: false }; } });
+  function toggleFold(k: string) {
+    setFolds((f) => { const n = { ...f, [k]: !f[k] }; try { localStorage.setItem("order:folds", JSON.stringify(n)); } catch { /* sem armazenamento */ } return n; });
+  }
+  function toggleView() {
+    setIsoView((v) => { try { localStorage.setItem("order:view", v ? "plan" : "iso"); } catch { /* sem armazenamento */ } return !v; });
+  }
   const logEnd = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let live = true;
@@ -338,7 +349,7 @@ export function Tabletop({ id, onLeave }: { id: string; onLeave: () => void }) {
     { id: "mark", icon: MapPin, label: "Marcação", gm: true },
   ] as const;
   return (
-    <div className="tabletop">
+    <div className={`tabletop ${folds.left ? "fold-left" : ""} ${folds.right ? "fold-right" : ""} ${folds.hand ? "fold-hand" : ""}`}>
       <header className="table-header">
         <button
           className="icon-btn"
@@ -553,6 +564,11 @@ export function Tabletop({ id, onLeave }: { id: string; onLeave: () => void }) {
                 <t.icon size={17} />
               </button>
             ))}
+          {scene.type === "board" && (
+            <button className={isoView ? "active view-toggle" : "view-toggle"} title={isoView ? "Ver planta 2D (editar salas e paredes)" : "Ver mesa isométrica de papel"} data-tip={isoView ? "Planta 2D" : "Isométrico"} aria-label="Alternar vista isométrica" onClick={toggleView}>
+              <Box size={17} />
+            </button>
+          )}
           <span />
           <button
             title="Rolar dados"
@@ -587,7 +603,46 @@ export function Tabletop({ id, onLeave }: { id: string; onLeave: () => void }) {
             </>
           )}
         </div>
-        {scene.type === "board" ? (
+        <button className="fold-tab left" onClick={() => toggleFold("left")} aria-label={folds.left ? "Abrir painel de cenas" : "Guardar painel de cenas"} title="Cenas, salas e mapa">{folds.left ? "›" : "‹"}<span>CENAS</span></button>
+        <button className="fold-tab right" onClick={() => toggleFold("right")} aria-label={folds.right ? "Abrir arquivo e registro" : "Guardar arquivo e registro"} title="Arquivo, chat e registro">{folds.right ? "‹" : "›"}<span>ARQUIVO</span></button>
+        <button className="fold-tab hand" onClick={() => toggleFold("hand")} aria-label={folds.hand ? "Abrir sua mão" : "Guardar sua mão"} title="Sua mão de cartas">{folds.hand ? "▲" : "▼"}<span>MÃO · {hand.length}</span></button>
+        <CombatCallouts logs={state.logs} characters={state.characters} enabled={state.combat.active || state.logs.length > 0} />
+        {scene.type === "board" && isoView ? (
+          <IsoBoard
+            scene={scene}
+            characters={state.characters}
+            selected={selected}
+            onSelect={selectCharacter}
+            master={master}
+            canControl={(c) => master || c.hand !== undefined}
+            onMove={(characterId, position, override) =>
+              void perform({ type: "token:move", characterId, position, override: master && override })
+            }
+            onPatch={patch}
+            focus={focus}
+            pendingActors={state.combat.pending.map((p) => p.actor)}
+            activeId={state.combat.active ? activeCharacter?.id : undefined}
+            actionMenu={
+              state.combat.active && activeCharacter && activeCharacter.hand !== undefined
+                ? {
+                    characterId: activeCharacter.id,
+                    node: (
+                      <PersonaMenu
+                        me={activeCharacter}
+                        cards={(activeCharacter.hand || []).map((id) => state.cards.find((c) => c.id === id)).filter((c): c is Card => !!c)}
+                        canAct={!state.combat.paused}
+                        onCard={(card) => { setControlled(activeCharacter.id); setSelectedCard(card); setModal("play"); }}
+                        onMove={() => { selectCharacter(activeCharacter.id); setTool("move"); }}
+                        onTest={() => { setControlled(activeCharacter.id); setModal("dice"); }}
+                        onSheet={() => { setSelected(activeCharacter.id); setModal("sheet"); }}
+                        onEnd={() => void perform({ type: "turn:end" })}
+                      />
+                    ),
+                  }
+                : null
+            }
+          />
+        ) : scene.type === "board" ? (
           <Board
             scene={scene}
             characters={state.characters}
@@ -615,6 +670,8 @@ export function Tabletop({ id, onLeave }: { id: string; onLeave: () => void }) {
             character={me?.npc ? undefined : me}
             master={master}
             perform={perform}
+            characters={state.characters}
+            onBackground={(url) => patch({ background: url })}
           />
         )}
         {state.combat.active && (
@@ -1263,6 +1320,18 @@ export function Tabletop({ id, onLeave }: { id: string; onLeave: () => void }) {
                 Rolar d20 · DT13
               </button>
             </div>
+            {me && (
+              <div className="attr-roll">
+                <span className="eyebrow">TESTE COM ATRIBUTO · DT 13</span>
+                <div>
+                  {(["FOR", "VIG", "INT", "AGI", "PRE"] as const).map((a) => (
+                    <button key={a} className="btn secondary compact" onClick={() => void perform({ type: "dice:roll", characterId: me.id, sides: 20, difficulty: 13, attribute: a })}>
+                      D20 + {a} <b>+{me.attributes?.[a] ?? 0}</b>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
           <div className="dice-history">
             {state.logs
@@ -1419,7 +1488,8 @@ export function Tabletop({ id, onLeave }: { id: string; onLeave: () => void }) {
 function DiceTray({ me, perform }: { me: PublicCharacter; perform: Perform }) {
   const [open, setOpen] = useState(false),
     [dt, setDt] = useState(13),
-    [skill, setSkill] = useState("");
+    [skill, setSkill] = useState(""),
+    [attr, setAttr] = useState<string>("");
   const forms = [...new Set(me.formationHand || [])];
   return (
     <div className={`dice-tray ${open ? "open" : ""}`}>
@@ -1451,6 +1521,7 @@ function DiceTray({ me, perform }: { me: PublicCharacter; perform: Perform }) {
                   characterId: me.id,
                   sides: 20,
                   difficulty: dt,
+                  ...(attr ? { attribute: attr } : {}),
                   ...(skill ? { skill, training: true } : {}),
                 })
               }
@@ -1477,6 +1548,13 @@ function DiceTray({ me, perform }: { me: PublicCharacter; perform: Perform }) {
                 title={{ 10: "Acessível", 13: "Padrão", 16: "Difícil", 19: "Extrema", 22: "Sobrenatural" }[v]}
               >
                 {v}
+              </button>
+            ))}
+          </div>
+          <div className="attr-pick" role="group" aria-label="Atributo do teste">
+            {(["FOR", "VIG", "INT", "AGI", "PRE"] as const).map((a) => (
+              <button key={a} className={attr === a ? "active" : ""} onClick={() => setAttr(attr === a ? "" : a)} title={`Somar ${a}`}>
+                {a}<b>+{me.attributes?.[a] ?? 0}</b>
               </button>
             ))}
           </div>

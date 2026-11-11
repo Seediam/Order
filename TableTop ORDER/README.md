@@ -2,6 +2,17 @@
 
 VTT local para o RPG ORDER: investigação, julgamento de almas, cenas narrativas e combate com cartas. Interface em português, servidor autoritativo e armazenamento no computador anfitrião. Versão **0.1**, funcional e expansível; veja os limites em [IMPLEMENTACAO.md](IMPLEMENTACAO.md).
 
+## Novidades da V0.6 · estilo do livro
+
+- **Mesa isométrica de papel**: o mapa se desdobra como uma folha ao abrir a cena. Botão do cubo na barra alterna entre isométrico e a planta 2D (a planta continua sendo onde se desenham salas e paredes).
+- **Construir mapa** (Mestre): pinte o piso com madeira, terra, pedra, tapete, roxo infernal, vermelho carne, água, grama, ossos ou abismo, e ponha barris, armários, mesas, cadeiras, caixas, estantes, bancos, velas, altar, cama, pilar, porta, cruz e espelho. Objetos sólidos bloqueiam o caminho dos tokens no servidor.
+- **Tokens de papel em pé**, com vida acima da cabeça e o verso da carta flutuando quando a jogada está mascarada.
+- **Menu de ação estilo JRPG** acima do personagem da vez: Ação (cartas da mão), Mover, Teste, Ficha, Passar. Setas + Enter também funcionam.
+- **Falas de impacto** no meio da luta (COMBATE!, ACERTOU!, ERROU!, CRÍTICO!, −3, CAIU!) com a tipografia das onomatopeias do livro.
+- **Painéis guardados**: as laterais e a mão abrem e fecham pelas abas nas bordas; a escolha fica salva no navegador.
+- **Visual novel em página dupla de livro**: Searchers à esquerda, NPCs à direita, quem fala em destaque. O Mestre troca o fundo da cena pelo álbum “Fundo da cena”.
+- **Atributos FOR, VIG, INT, AGI, PRE**: 7 pontos, de 0 a 3 cada, com padrão por Setor. Entram no D20 (bandeja de dados e mesa de dados) e VIG soma Vida máxima.
+
 ## Novidades da V0.5
 
 - **Cartas reais.** O catálogo demonstrativo foi trocado pelas 50 cartas ilustradas (e as 8 de Doutrina do livro), geradas de `../cards.js` em `shared/order-cards.ts`. A arte é a própria carta na mão e na biblioteca. Decks prontos do cap. 11.3. Campanhas antigas são migradas sozinhas ao abrir: recebem as cartas novas e os Searchers ganham o deck pronto do Setor.
