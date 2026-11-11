@@ -363,3 +363,24 @@ body.hells #app{background:radial-gradient(ellipse at 50% 40%,#4a0f24,#14050c 60
 .pol-row{flex-wrap:nowrap;gap:28px}
 .polaroid.tall .photo{width:auto;height:min(40vh,330px);aspect-ratio:.75}
 .album-page.right{overflow:hidden}
+
+/* contracapa: o livro fecha para o lado depois da página dupla */
+.flip-leaf.closing{left:0;transform-origin:right center;z-index:30}
+.back-cover-face{display:grid;align-content:center;justify-items:center;gap:14px;padding:12% 10%;text-align:center;background:radial-gradient(ellipse at 50% 40%,#3a0c1f,#16060d 70%),#16060d;transform:none}
+.flip-leaf .back-cover-face{position:absolute;inset:0;border-radius:4px 10px 10px 4px}
+.bc-glow{position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(255,47,142,.25),transparent 55%),repeating-linear-gradient(125deg,rgba(255,255,255,.02) 0 2px,transparent 2px 7px);pointer-events:none}
+.bc-logo{position:relative;width:52%;filter:drop-shadow(0 4px 18px #000)}
+.bc-eye{position:relative;top:auto;left:auto;transform:none;width:26%}
+.bc-kicker{position:relative;font:400 12px var(--label);letter-spacing:.4em;color:var(--rose)}
+.back-cover-face h2{position:relative;margin:0;font:900 clamp(20px,2.2vw,32px)/1.12 var(--title);color:#fff2f8;text-shadow:0 3px 0 #6b0b2b}
+.back-cover-face p{position:relative;margin:0;font:600 clamp(15px,1.3vw,19px)/1.4 var(--body);color:#e9d3de}
+.bc-discord{position:relative}
+.bc-code{position:relative;font:400 10px var(--label);letter-spacing:.24em;color:var(--mute)}
+.back-book{transform:rotateX(14deg) rotateY(18deg) rotateZ(-2deg)}
+.back-book:hover{transform:rotateX(8deg) rotateY(10deg) rotateZ(-1deg) translateY(-6px)}
+.back-book .cb-cover{position:absolute;inset:0}
+.back-book .cb-pages{inset:6px 8px 6px 4px;border-radius:8px 2px 2px 8px}
+.end-desk .cover-copy .cover-actions{gap:10px}
+.back-book .cb-cover.back-cover-face{transform:translateZ(14px)}
+.back-cover-face p{position:relative;bottom:auto;left:auto;right:auto;letter-spacing:0;text-transform:none}
+.back-book{animation:none}
