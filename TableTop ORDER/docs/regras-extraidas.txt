@@ -1,0 +1,656 @@
+O R D E R
+MANUAL DO PROCURADOR
+Você morreu.O julgamento não acabou.Agora é você quem cobra.
+RPG DE MESA  •  DECKBUILDER  •  TERROR PSICOLÓGICO
+LIVRO DE REGRAS · VERSÃO 0.1 · PROTÓTIPO PARA PLAYTEST
+Material autoral desenvolvido a partir do conceito de ORDER. Todas as estatísticas, probabilidades e custos desta edição são propostas iniciais para teste em mesa.
+
+A sentença de abertura
+Você não é um demônio. Você foi humano, morreu com um pecado gravado no nome e recebeu a pior das oportunidades: trabalhar para quem comprou a sua condenação. Os Searchers — Procuradores — deixam o Inferno para apurar contratos, buscar almas vendidas e julgar gente que talvez mereça misericórdia, talvez não. A ordem recebida é clara; a verdade, quase nunca.
+Em ORDER, a ação não substitui a escolha. Uma vitória pode cobrar a própria sanidade, uma absolvição sem provas pode quebrar a confiança da equipe e a fama infernal que desbloqueia poder também convida demônios rivais a tomar seu lugar.
+Os três pilares
+JULGAMENTO: reúna provas, reconheça mentiras, escolha uma sentença e suporte suas consequências.
+DOIS TERRITÓRIOS: Cómum resolve conflitos humanos, investigação, moral e violência; Hells intensifica luta, sobrevivência e hierarquia infernal.
+CARTAS COMO LINGUAGEM: o mesmo deck de Ação se transforma conforme o território; o deck de Formação define o que o Searcher sabe fazer com consistência.
+Cuidado com o conteúdo
+O jogo aborda morte, culpa, manipulação, abuso de poder e ameaças a inocentes. Antes da campanha, jogadores e narrador combinam temas proibidos (linhas), temas que ficarão fora de cena (véus) e uma palavra ou sinal para interromper qualquer descrição. Horror psicológico funciona melhor com atmosfera e consequências do que com violência explícita.
+Sumário
+1. Material e vocabulário  •  2. Criação de Searchers  •  3. Dados e testes  •  4. Decks  •  5. Rodadas e combate  •  6. Hells e Cómum  •  7. Cinco Setores  •  8. Pecados  •  9. Formação  •  10. Equipamentos  •  11. Catálogo de Ações  •  12. Recursos e progresso  •  13. Portões e bestiário  •  14. Contrato de exemplo  •  15. Guia de condução  •  16. Referência rápida e ficha.
+1. Material e vocabulário
+Para jogar: 1 narrador, 2–5 Searchers, um dado de vinte faces (d20), um dado de seis faces (d6) por jogador, fichas, cartas impressas ou digitais, marcadores e mapas em quadrados com salas, corredores e portas, no estilo investigativo de Clue.
+Termo
+O que significa
+Searcher
+Humano morto, condenado e recrutado para cumprir sentenças.
+Setor
+Classe profissional: define estilo de combate e acesso a cartas.
+Pecado
+Origem da condenação: concede uma passiva e modificadores.
+Ação
+Carta jogada; possui efeitos diferentes em Hells e Cómum.
+Formação
+Deck de perícias, separado do deck de Ação.
+Equipamento
+Carta persistente de arma ou instrumento fora dos 20 espaços.
+Queimar / banir
+Remover temporariamente uma carta do deck até a próxima cena.
+Incisão
+Dano argumentativo que reduz a Resistência de um alvo no Cómum.
+Hell of Fame
+Renome individual: funciona como nível e atrai perseguição.
+Cena / contrato
+Cena é um trecho contínuo; contrato é uma missão completa.
+
+2. Criação de um Searcher
+A ficha é montada nesta ordem. Todos começam como Procuradores recém-designados, a menos que a mesa esteja iniciando uma campanha avançada.
+01 · IDENTIDADE  Nome, idade ao morrer, aparência, como morreu, crime ou pecado, sentimento de culpa e a pessoa viva que ainda o afeta.
+02 · SETOR  Escolha Incidência, Relação, Justiça, Socialista ou Doutrina; anote a passiva e os dois bônus de Setor.
+03 · PECADO  Escolha uma das sete origens; anote bônus de perícia e passiva.
+04 · PERÍCIAS PRINCIPAIS  Escolha três das dez perícias. Elas determinarão as cópias extras de Formação.
+05 · RECURSOS  Vida 12, Moral 8, Sanidade 10, Defesa 11, Movimento 3. Confiança da equipe 6/10; Fame individual 0. Ajuste pelo Setor.
+06 · DECKS  Monte 20 Ações e 16 Formações; escolha Pistola ou outra arma inicial e um instrumento inicial.
+07 · VÍNCULOS  Cada jogador escreve um segredo que não pode dizer ao grupo e algo que jamais faria de novo.
+08 · DESIGNAÇÃO  Dê ao grupo um nome de operação, um superior infernal e o contrato que abre a primeira sessão.
+REGRA DE MESA  Bônus de perícia vindos de Setor e Pecado somam até +3; bônus temporários de cartas e Formação são separados desse teto.
+3. Dados, ativação e testes
+Teste d20: o risco da ação
+Quando uma tentativa relevante pode falhar, role d20 + bônus permanente de perícia + bônus de Formação (+2, se jogar a carta correspondente) + bônus circunstancial (até +2), e compare com a Dificuldade de Teste (DT). Um 20 natural é sucesso com um benefício; um 1 natural falha com uma complicação. Esses extremos valem também em ataques.
+DT
+Exemplo
+10
+Acessível: notar uma pista que quase salta aos olhos.
+13
+Padrão: convencer uma testemunha indecisa.
+16
+Difícil: quebrar um álibi cuidadosamente preparado.
+19
+Extrema: derrubar uma versão apoiada por poder infernal.
+22
+Sobrenatural: inverter um pacto selado.
+
+Em uma disputa, quem age rola d20 e o oponente usa Defesa ou rola um teste oposto se o narrador pedir; empate favorece quem está resistindo. Só role se fracasso mudar a história.
+D6 impresso nas cartas: ativação
+Cada Ação traz números marcados de 1 a 6. Ao jogar a carta ABERTA, role 1d6. Se sair um dos números impressos, a habilidade ativa. Caso contrário, a carta é gasta, falha e vai ao descarte. Um ataque ativado ainda precisa acertar o d20 contra a Defesa do alvo. Efeitos de cura, movimento, escudo ou compra de cartas não precisam de d20, salvo se a própria carta exigir.
+Números na carta
+Chance de ativação
+1 · 3 · 6
+3/6 = 50%
+2 · 4 · 5 · 6
+4/6 ≈ 67%
+1 · 2 · 3 · 4 · 5
+5/6 ≈ 83%
+
+REGRA DE MESA  O d6 decide se o efeito acontece. O d20 decide se um ataque ativado acerta e se uma resistência é superada. Não role o d20 para efeitos automáticos.
+ÚLTIMO RECURSO (regra de tensão): uma vez por Cena, após falhar o d6 de uma Ação aberta, você pode pagar 1 Sanidade no Hells ou 2 Moral no Cómum para rerrolar esse d6. O novo resultado é obrigatório. Isso reduz turnos sem efeito, mas transforma a persistência em custo psicológico ou moral.
+Exemplo de resolução
+O Searcher usa “Corte de Rotina” com D6 {1, 3, 6}. Rola 3: ativou. Como o efeito é ofensivo, rola d20 + Confronto contra Defesa 12. Se alcançar 12, causa o dano impresso. Caso tivesse tirado 5 no d6, a carta falharia antes do ataque.
+4. As três famílias de cartas
+Deck de Ação — exatamente 20 cartas
+Cada Searcher monta um deck com 20 cartas: no mínimo 12 do próprio Setor e no máximo 8 Universais; não pode repetir uma mesma carta mais de duas vezes. Em campanha, recompensas podem liberar cartas novas, mas não ultrapassam 20 espaços. O deck pertence à ficha, não à cena.
+PREPARO: no início de cada cena, embaralhe as 20 Ações e compre 3. No início de cada turno seguinte, compre 1. Mão máxima: 5; ao exceder, descarte até 5. Cartas usadas vão para o descarte; ao esgotar a compra, reembaralhe o descarte, exceto cartas Banidas.
+Deck de Formação — exatamente 16 cartas
+As dez perícias são sempre representadas: 1 carta de cada uma. Escolha 3 perícias principais e acrescente +2 cópias de cada uma delas. Resultado: 10 cartas de base + 6 extras = 16 cartas de Formação. Portanto, cada perícia principal tem 3 cartas no deck; as outras têm 1.
+No início de cada cena, compre 2 Formações. Em cada turno, compre 1 Formação adicional. Mão máxima de Formação: 4. Jogar uma Formação correspondente durante um teste concede +2 à rolagem e a descarta. Sem essa carta, ainda é permitido testar a perícia, mas sem o +2. Uma Formação pode auxiliar uma Ação no mesmo turno sem gastar outra Ação.
+Se o deck de Formação esgotar, reembaralhe seu descarte. A cópia de Formação permite usar aquele tipo de perícia com mais frequência: ela não cria bônus permanente nem muda o d6 das Ações.
+Equipamentos — fora dos 20 espaços
+Equipe até 1 Arma e 1 Instrumento. Esses itens ficam virados para cima ao lado da ficha, não entram no deck de Ação nem no de Formação. Efeitos contínuos funcionam sempre; efeitos “VIRE” exaurem o item e só voltam depois da recarga. Você pode virar um item equipado gratuitamente uma vez por turno, além de sua Ação; trocar um equipamento no meio de uma cena gasta sua Ação.
+5. Rodada, mapa e combate
+Ordem de um turno
+Em combate, cada Searcher e inimigo rola d20 + Reflexos no começo da cena; a ordem permanece até a cena terminar. Empates: maior Reflexos, depois jogadores. Cada personagem tem 1 Ação, 1 Movimento básico de até 3 quadrados e 1 Reação por rodada. Passivas como a do Apostador podem conceder uma segunda Ação.
+Fase
+Procedimento
+1 · Início
+Compre 1 Ação e 1 Formação; resolva sangramento e recargas.
+2 · Movimento
+Ande até 3 quadrados, antes, entre ou depois de suas Ações.
+3 · Ação (1)
+Jogue carta aberta, ataque normal mascarado, teste perícia, ajude ou interaja. Virar item equipado é grátis 1 vez/turno.
+4 · Fim
+Revele ataques mascarados, faça leitura de intenção e resolva-os; descarte e encerre.
+
+Movimento e portas
+Uma casa ortogonal custa 1 quadrado; diagonais não valem. Paredes impedem movimento e linha de tiro. Abrir uma porta destrancada é gratuito uma vez por turno; arrombar, destrancar, vasculhar ou manipular mecanismo custa 1 Ação, com d20 se houver risco. Dois personagens não podem terminar na mesma casa.
+Queimar uma carta para andar de novo
+Uma vez por turno, o jogador pode QUEIMAR uma Ação da mão: ela sai do jogo até a próxima Cena e o Searcher ganha um segundo Movimento básico completo (mais 3 quadrados). Não pode queimar uma carta já jogada. A carta queimada não volta quando a pilha é reembaralhada; no começo da próxima cena, retorna ao deck antes de embaralhar. Queimar não concede Ação extra.
+Virar uma Ação de lado — ataque normal mascarado
+Gaste 1 Ação e ponha 1 carta da mão DE LADO, com o rosto oculto. Declare o alvo e a arma utilizada, sem revelar a identidade nem o efeito da carta. A carta perde seu efeito impresso e prepara um ataque normal. No FIM desse turno, revele a carta. O alvo joga 1d6: se cair em um dos números impressos na carta, compreende sua intenção e pode usar a Reação “Antecipar” (+3 Defesa contra esse ataque). Se não acertar, não ganha essa reação especial. Em seguida, atacante rola d20 + Confronto contra Defesa; ao acertar, inflige 1 dano mais o bônus da arma. Descarte a carta. Não role d6 de ativação para ataque mascarado.
+A reação Antecipar só pode ser usada se a reação da rodada estiver disponível. O alvo conhece o movimento geral do agressor e a arma anunciada, mas não sabe qual carta foi escondida até o fim do turno. Assim, armas informam alcance e dano; o d6 da carta escondida informa apenas a facilidade de ler a intenção.
+Reações comuns
+Uma vez por rodada, quando for alvo de um efeito, o personagem pode usar sua Reação para Evasão (+2 Defesa contra um ataque, sem rolar Formação), Interposição (recebe o ataque direcionado a um aliado adjacente) ou Contradição (+2 na resistência social). Antecipar é uma opção especial, de +3 Defesa, liberada apenas após leitura correta de uma carta mascarada. Não acumule duas reações no mesmo ataque.
+Dano, proteção e derrota
+Vida começa em 12. Escudo absorve dano antes de Vida e expira no início do próximo turno do protegido, salvo texto contrário. A 0 Vida, um humano ou Searcher fica Caído: não age e pode receber socorro com 1 Ação, Formação adequada e DT 13. Se permanecer Caído por 2 rodadas completas ou sofrer novo golpe letal, morre definitivamente na missão. O grupo pode fugir, negociar ou recolher o corpo; a morte precisa ser uma possibilidade real anunciada pela ficção.
+REGRA DE MESA  Ataque normal com Pistola: alcance máximo 3 casas, teste d20, dano 1 básico + 2 fixo da arma = 3 ao acertar. O +2 é garantido no dano também quando um ataque físico aberto usa a Pistola, mas nunca torna o tiro automaticamente certeiro.
+6. Dois campos de combate
+CÓMUM — realidade, contradição e julgamento
+No Cómum, cada personagem pode atacar a Vida com violência ou atacar a RESISTÊNCIA de um interlocutor por meio de Incisão. Cómum não é “combate sem dano”: um confronto físico mata; um confronto verbal pode destruir uma carreira, revelar um crime, gerar pânico ou forçar a aceitação de um pacto.
+O alvo social importante recebe Resistência (normal 4, mentiroso experiente 6, pactuado 8) e Defesa de Argumento, usualmente DT 13–19. Uma Ação que causa Incisão ativa no d6, depois exige d20 com a perícia pertinente (Persuasão, Enganação, Comunicação, Flerte ou Convicção) contra sua Defesa de Argumento. Ao acertar, reduza Resistência pela Incisão da carta. Quando chega a 0, a pessoa está vulnerável a admitir, revelar, ceder ou negociar — não se torna automaticamente culpada.
+MORAL é a energia exclusiva do Cómum. Começa em 8. Pague custos de Moral indicados nas cartas antes de jogar. Se chegar a 0, você NÃO pode usar Ações de convencimento, nem selar ou iniciar um julgamento nessa Cena. Pode investigar, se defender, atacar fisicamente e fugir. Ao encerrar a Cena, recupera 2 Moral (até seu máximo). No Hells, Moral não é gasta.
+Ritual de Julgamento
+Para emitir uma sentença contra alguém, o grupo precisa reunir ao menos 2 Provas reais (não boatos nem impressões), reduzir a Resistência do alvo a 0 OU obter confissão livre, e ter ao menos 2 Moral no Searcher que pronuncia o veredito. Gaste 2 Moral e faça d20 + Convicção (Formação opcional) contra DT 13 + número de Portão do caso (1 a 5). Sucesso: selamento válido; falha: o contrato reage com um efeito de cena e o grupo deve buscar nova abordagem, prova ou acordo. Se o sujeito for inocente de um crime, o grupo ainda pode cobrar um contrato comprovado, mas deve decidir conscientemente qual obrigação está executando.
+Tipos de sentença
+COLETAR: cumprir a cláusula e extrair a alma prevista no contrato; aumenta Fame e pode provocar combate.
+ADIAR: renegociar prazo mediante preço explícito, sem aceitar vítimas inocentes como substituição sem consequência.
+ABSOLVER: proteger ou soltar o alvo; só preserva Confiança se houver prova ou justificativa consistente.
+CORROMPER: aceitar oferta cruel, subornar ou adulterar o pacto; recompensa imediata maior e custos psíquicos/infernais.
+HELLS — violência, perseguição e poder
+No Hells, todas as Ações usam o texto Hells: dano, Cura, Escudo, Controle, mobilidade e marcas infernais. Não há Resistência argumentativa nem custos de Moral. Há, em vez disso, criaturas, armadilhas, hierarquias e demônios que reconhecem o nome famoso do Searcher. A prova de força nunca prova inocência.
+Ao retornar do Cómum, o narrador pode abrir uma travessia de Portão: uma cena curta, um julgamento interno ou uma perseguição. O Portão de acesso e a caça são definidos pela Hell of Fame do Searcher mais famoso, não pela média do grupo. Assim, um jogador ambicioso expõe toda a equipe.
+7. Os cinco Setores
+Cada Setor adiciona uma passiva e bônus fixos. Dois Searchers da mesma classe podem ter decks, Pecados e equipamentos muito diferentes.
+Setor
+Bônus inicial
+Passiva
+INCIDÊNCIA · Tank
++2 Vida máxima; +1 Confronto; +1 Reflexos
+Bastião: 1 vez/rodada intercepte um ataque a aliado adjacente e reduza o dano sofrido em 1.
+RELAÇÃO · Equilíbrio
++1 Comunicação; +1 Persuasão
+Reciprocidade: 1 vez/rodada, se uma Ação beneficiar você e outro personagem, ganhe +1 Escudo.
+JUSTIÇA · Carry
++1 Investigação; +1 Convicção
+Veredito: ao registrar uma Prova verdadeira, some +1 ao próximo teste de Julgamento ou ataque; máx. 2 cargas por Cena.
+SOCIALISTA · Suporte
++1 Comunicação; +1 Flerte
+Rede de Apoio: uma vez por Cena, transfira 1 de Moral ou 2 de Escudo para aliado até 3 casas.
+DOUTRINA · Assassino
++1 Furtividade; +1 Confronto; -2 Vida máxima
+Sentença Solitária: o primeiro ataque em um inimigo isolado por rodada causa +2 dano se você estiver sem aliados adjacentes.
+
+REGRA DE MESA  O nome Socialista designa, neste mundo, a especialidade de alianças, solidariedade e proteção. Não determina alinhamento político de jogador ou personagem.
+8. Pecado: o que você era em vida
+O Pecado é a “raça” funcional de ORDER, mas não representa uma espécie sobrenatural. Todos são humanos falecidos; a origem do pecado marca o padrão psicológico de cada Searcher.
+APOSTADOR
+Bônus: +1 Persuasão, +1 Enganação.
+Passiva: Jogada Marcada: antes de rolar um d6 seu, anuncie um número. Se acertar exatamente, ganhe uma segunda Ação neste turno. Limite: 1 vez por rodada; a carta ainda precisa ativar normalmente.
+MILICIANO
+Bônus: +1 em uma perícia escolhida.
+Passiva: Apreender: escolha 1 carta na mão de um adversário para ele descartar. Se a mão estiver oculta, ele a revela antes da escolha. Recarga: 3 de seus turnos completos.
+LUXUOSA
+Bônus: +1 Flerte, +1 Comunicação.
+Passiva: Encanto: uma vez em cada um de seus turnos, quando você e um inimigo rolarem d20 na mesma disputa, troque os resultados naturais antes dos bônus.
+TRAIDOR
+Bônus: +1 Enganação, +1 Furtividade.
+Passiva: Por Trinta: 1 vez por Cena, interrompa o próximo turno de um aliado e tome esse turno para si, imediatamente após o atual. Pague 1 Moral no Cómum ou perca 1 Sanidade no Hells. O grupo pode reagir narrativamente.
+GANANCIOSO
+Bônus: +1 Comunicação.
+Passiva: Tudo Meu: por carta sua Banida durante a Cena, escolha +1 dano físico ou +1 Incisão social em um efeito seu, com máximo de +3 no total por resolução.
+INVÍDO [INVEJOSO]
+Bônus: Não escolhe 3 perícias principais próprias.
+Passiva: Inveja Formada: copie as 3 perícias principais de outro Searcher e adicione apenas +1 cópia de cada ao deck: sua Formação terá 13 cartas (10 + 3). Em compensação, uma vez por Cena, você pode jogar uma Formação que um aliado acabou de descartar como se estivesse em sua mão.
+CONSELHO DE ONÇA
+Bônus: +1 Enganação.
+Passiva: Conselho de Onça: após uma Enganação bem-sucedida contra alguém em conflito, force esse alvo a descartar uma Ação que acabou de jogar, cancelando apenas efeitos persistentes ainda não resolvidos. Uma vez por rodada.
+REGRA DE MESA  Traidor: o cancelamento entre jogadores exige acordo prévio de mesa sobre conflito entre personagens. Se o grupo preferir jogo cooperativo, substitua por cancelar um turno de NPC aliado controlado pelo narrador.
+9. As dez perícias de Formação
+Formação
+Aplicação típica / combate
+Confronto
+Armas, ataque corpo a corpo, luta, intimidação física.
+Reflexos
+Iniciativa, fugas, saltos, esquivas, perseguições.
+Investigação
+Analisar evidências, reconstruir cenas, cruzar documentos.
+Percepção
+Detectar armadilhas, mentiras físicas, sinais e presenças.
+Persuasão
+Convencer com razões, oferecer acordos, obter cooperação.
+Enganação
+Mentir, forjar, blefar, esconder a intenção.
+Comunicação
+Negociar com grupos, liderar, acalmar, interrogar.
+Flerte
+Seduzir, conquistar confiança pessoal e ler desejos.
+Furtividade
+Ocultar, infiltrar, esgueirar, furtar pequenos objetos.
+Convicção
+Resistir ao medo, pactos, dogmas, vereditos e pressão moral.
+
+FORMAR UMA PERÍCIA: ao testar Persuasão, por exemplo, jogue a Formação “Persuasão” se estiver na mão (+2 ao d20). Sem a carta, teste com o seu bônus permanente normalmente. Um sucesso com Formação pode, a critério do narrador, produzir uma pista mais clara ou uma vantagem narrativa adicional, sem gerar dano extra.
+10. Armas e instrumentos
+Armas conferem alcance, bônus ou estilo de ataque físico (normal ou de carta, desde que use a arma). A carta não exige d6 para a vantagem contínua; o ataque normal continua sujeito ao d20. Instrumentos podem ser virados gratuitamente uma vez por turno para efeitos de suporte e têm recarga própria.
+Carta equipada
+Tipo
+Vantagem e limite
+PISTOLA
+Arma
+Alcance 3; +2 dano fixo em qualquer ataque físico que acertar com ela. Não ignora paredes.
+FACA DE CONFISSÃO
+Arma
+Alcance 1; +1 dano fixo e, ao atacar alvo Exposto, +1 Incisão se estiver no Cómum.
+BASTÃO DE PENITÊNCIA
+Arma
+Alcance 1; +1 dano; ataque normal bem-sucedido empurra alvo 1 casa se livre.
+REVÓLVER DE CULPA
+Arma
+Alcance 2; +1 dano; 1 vez/Cena converta +1 Incisão em dano se o alvo mentiu.
+PASTA DE CONTRATOS
+Instrumento
+VIRE: revele 1 pista acessível ou dê +2 a um teste de Investigação. Recarga 3 turnos.
+PAPEL E CANETA
+Instrumento
+VIRE: compre 1 carta extra de Ação. Recarga 2 turnos.
+ESPELHO DE BOLSO
+Instrumento
+VIRE: depois de rolar d6 de leitura, role novamente e fique com o novo. Recarga 2 turnos.
+DISTINTIVO MORTO
+Instrumento
+VIRE: um aliado até 2 casas recebe +2 Defesa até início do próximo turno. Recarga 3 turnos.
+
+RECARREGAR: ao virar um item, marque seu contador. Conte seus próximos turnos completos, inclusive um turno em que você apenas se mova. Papel e Caneta usado no turno 1 fica indisponível nos turnos 2 e 3 e volta pronto no início do turno 4. Não vire o item novamente antes disso.
+11. Catálogo inicial de cartas de Ação
+Todas as cartas abaixo têm duas faces funcionais de texto, uma por território. O d6 aparece na mesma carta e vale para a habilidade usada em qualquer território. Ataques abertos ofensivos seguem ativação d6 → ataque d20. Efeitos de Incisão exigem teste d20 com a perícia indicada, salvo texto “automático”.
+11.1 Cartas Universais — qualquer Setor
+PASSO CALCULADO   D6 1·2·3·4HELLS  Mova +2 casas e ganhe 1 Escudo.    |    CÓMUM  Mova +2 casas ou aproxime-se de uma pista sem ser percebido.
+DEFESA DE ÚLTIMA HORA   D6 2·3·5·6HELLS  Ganhe 3 Escudo.    |    CÓMUM  Ganhe 2 Escudo ou +2 à próxima defesa argumentativa.
+CORTE DE ROTINA   D6 1·3·6HELLS  Cause 3 dano em alcance de arma.    |    CÓMUM  Cause 2 dano físico ou 1 Incisão usando Comunicação.
+QUESTIONAMENTO   D6 1·2·4·5HELLS  Cause 1 dano e deixe o alvo Exposto.    |    CÓMUM  Custa 1 Moral; faça 2 Incisão com Persuasão e registre 1 contradição.
+RETIRADA ESTRUTURADA   D6 2·4·5·6HELLS  Mova 3 casas e ganhe +2 Defesa até próximo turno.    |    CÓMUM  Mova 3 casas; se fugir de um encontro perigoso, o efeito não evita a perda narrativa de Confiança.
+PRIMEIROS CUIDADOS   D6 1·2·3·6HELLS  Cure 3 Vida em você ou aliado adjacente.    |    CÓMUM  Cure 2 Vida ou estabilize alguém Caído com DT 13.
+REGISTRO DE CULPA   D6 1·3·4·6HELLS  Marque o inimigo: o próximo dano nele recebe +2.    |    CÓMUM  Custa 1 Moral; ganhe +2 Investigação em uma pista e 1 Incisão se o alvo mentir.
+MANTER A LINHA   D6 1·2·5·6HELLS  Aliado até 2 casas recebe 2 Escudo.    |    CÓMUM  Dê 1 Moral a um aliado, retirando 1 sua; não pode superar máximo.
+FALSO MOVIMENTO   D6 1·4·5·6HELLS  Dê -2 Defesa a um alvo até o início de seu próximo turno.    |    CÓMUM  Faça 1 Incisão usando Enganação ou obtenha distração breve.
+SILÊNCIO NECESSÁRIO   D6 2·3·4·6HELLS  Remova Abalado de um aliado e ganhe 1 Escudo.    |    CÓMUM  Custa 1 Moral; anule uma penalidade de medo em um teste nesta cena.
+11.2 INCIDÊNCIA
+LINHA DE CHOQUE   D6 1·2·3·6HELLS  Cause 2 dano e empurre alvo 1 casa.    |    CÓMUM  Cause 1 dano e interrompa tentativa de fuga.
+OMBRO DE FERRO   D6 1·2·4·6HELLS  Receba 4 Escudo.    |    CÓMUM  Receba 2 Escudo e proteja uma testemunha adjacente.
+PRIMEIRO NA PORTA   D6 1·3·5·6HELLS  Mova 3 casas e ganhe +2 Defesa.    |    CÓMUM  Entre em ambiente arriscado sem sofrer a primeira ameaça ambiental.
+PRISÃO DE IMPACTO   D6 2·3·4·6HELLS  Cause 2 dano e Contenha o alvo até próximo turno.    |    CÓMUM  Confronto contra Defesa; cause 1 dano e impeça deslocamento de suspeito.
+CORPO NA FRENTE   D6 1·2·3·4HELLS  Tome um ataque destinado a aliado até 2 casas, com -2 dano.    |    CÓMUM  Proteja testemunha; evite que ela seja silenciada nesta rodada.
+AVANÇO IMPLACÁVEL   D6 1·2·5·6HELLS  Mova 2 casas e cause 3 dano a alvo adjacente.    |    CÓMUM  Cause 2 dano físico, mas ganhe 1 suspeita pública.
+MURALHA DE CARNE   D6 1·3·4·5HELLS  Ganhe 2 Escudo; dois aliados adjacentes ganham 1.    |    CÓMUM  Até duas pessoas adjacentes recebem +2 em teste de resistência ao medo.
+ÚLTIMA ADVERTÊNCIA   D6 1·2·3·5HELLS  Cause 2 dano; se alvo atacar aliado antes do seu próximo turno, mais 1.    |    CÓMUM  Custa 1 Moral; 2 Incisão por Comunicação; se Resistência zerar, não provoca fuga.
+11.2 RELAÇÃO
+MÃO DUPLA   D6 1·2·3·6HELLS  Você e aliado até 2 casas ganham 2 Escudo.    |    CÓMUM  Você e um aliado ganham +1 no próximo d20 social.
+TROCA DE FAVORES   D6 1·3·4·6HELLS  Cure 2 Vida de aliado e 1 em você.    |    CÓMUM  Custa 1 Moral; recupere 2 Moral de aliado e 1 sua.
+FALA ESPELHADA   D6 2·3·4·6HELLS  Cause 2 dano e receba 1 Escudo.    |    CÓMUM  1 Incisão; se o alvo confessar detalhe, compre 1 Formação.
+PONTE ARRISCADA   D6 1·2·5·6HELLS  Troque de posição com aliado a até 3 casas.    |    CÓMUM  Custa 1 Moral; transfira 1 Incisão recebida por aliado para um NPC que a provocou.
+PROMESSA RECÍPROCA   D6 1·3·5·6HELLS  Você e aliado ganham +2 no próximo ataque.    |    CÓMUM  Faça 2 Incisão por Persuasão; se falhar, perca 1 Moral.
+SINAL DE ALIANÇA   D6 1·2·4·5HELLS  Compre 1 Ação; um aliado compra 1 Ação.    |    CÓMUM  Você e aliado compram 1 Formação cada; você perde 1 Moral.
+DÍVIDA CRUZADA   D6 2·3·5·6HELLS  Marque 2 alvos: o primeiro a atacá-lo sofre 2 dano.    |    CÓMUM  Ganhe 1 prova se o aliado já tiver obtido uma pista complementar.
+PAZ CUSTOSA   D6 1·2·3·5HELLS  Cure 3 Vida de alvo e sofra 1 dano.    |    CÓMUM  Reduza 2 Resistência de NPC, mas comprometa 1 Moral ao negociar.
+11.2 JUSTIÇA
+ARTIGO FINAL   D6 1·2·3·6HELLS  Cause 3 dano; +1 se tiver Prova da cena.    |    CÓMUM  Custa 1 Moral; cause 2 Incisão com Convicção; +1 com Prova válida.
+PESO DA VERDADE   D6 1·3·4·6HELLS  Cause 2 dano; alvo fica Exposto.    |    CÓMUM  Com Investigação, cause 2 Incisão ao confrontar testemunho com documento.
+OBJEÇÃO   D6 2·3·5·6HELLS  Anule 2 dano que receberia e devolva 1 ao agressor.    |    CÓMUM  Custa 1 Moral; cancele 1 Incisão sofrida e ganhe +2 no próximo Julgamento.
+CADEIA DE CUSTÓDIA   D6 1·2·5·6HELLS  Receba 2 Escudo; o próximo ataque ganha +1.    |    CÓMUM  Proteja 1 Prova de falsificação; ganhe +2 no próximo teste que a utilize.
+SENTENÇA PARCIAL   D6 1·2·4·6HELLS  Cause 2 dano; se alvo estiver Exposto, cause +2.    |    CÓMUM  Custa 1 Moral; 3 Incisão se alvo já tiver sido confrontado com 2 Provas.
+ÚLTIMO DEPOIMENTO   D6 1·2·3·5HELLS  Cause 2 dano e cure 1 Vida.    |    CÓMUM  Custa 1 Moral; ganhe confissão parcial de NPC com Resistência 2 ou menos.
+MARTELO DE CINZAS   D6 1·3·5·6HELLS  Cause 4 dano em alcance 1.    |    CÓMUM  Custa 2 Moral; 3 Incisão contra culpado comprovado; falha causa -1 Sanidade.
+SEM APELAÇÃO   D6 1·2·4·5HELLS  Cause 2 dano a cada um de até 2 inimigos adjacentes.    |    CÓMUM  Custa 2 Moral; alvos com 0 Resistência não podem fugir antes do próximo Julgamento.
+11.2 SOCIALISTA
+CORDÃO HUMANO   D6 1·2·3·4HELLS  Dê 2 Escudo a até dois aliados até 2 casas.    |    CÓMUM  Você e um aliado ganham +2 no próximo teste social cooperativo.
+COBERTURA SOLIDÁRIA   D6 2·3·4·6HELLS  Cure 2 Vida de aliado e dê 1 Escudo a outro.    |    CÓMUM  Custa 1 Moral; transfira 2 Moral suas a aliado e remova Abalado dele.
+REDE DE BOATOS   D6 1·2·5·6HELLS  Dois inimigos ficam Expostos.    |    CÓMUM  Investigação: descubra a origem de 1 boato; ganhe 1 pista parcial.
+VOZ DA MULTIDÃO   D6 1·3·5·6HELLS  Aliados até 2 casas ganham +1 no próximo d20 de ataque.    |    CÓMUM  Custa 1 Moral; 1 Incisão em até 2 pessoas que compartilhem a mesma mentira.
+REFÚGIO IMPROVISADO   D6 1·2·4·5HELLS  Crie zona adjacente que concede 2 Escudo a quem entrar uma vez.    |    CÓMUM  Proteja civil; impeça consequência imediata de pânico por uma rodada.
+LAÇO INQUEBRÁVEL   D6 1·3·4·6HELLS  Aliado a 3 casas troca de posição com você e cura 1 Vida.    |    CÓMUM  Aliado a 3 casas troca 1 Formação sua por 1 Formação dele, com acordo.
+SOCORRO COLETIVO   D6 1·2·3·5HELLS  Cure 2 Vida de até 2 aliados; não cure a si mesmo.    |    CÓMUM  Custa 1 Moral; recupere 1 Sanidade de aliado, máximo 1 por Cena.
+NÃO SOLTE A MÃO   D6 1·2·4·6HELLS  Um aliado Caído estabiliza sem teste e recebe 1 Vida.    |    CÓMUM  Retire efeito Silenciado de aliado; reduza 1 Resistência social se houver empatia genuína.
+11.2 DOUTRINA
+CORTE ÚNICO   D6 1·3·5·6HELLS  Cause 4 dano a um alvo isolado em alcance 1.    |    CÓMUM  Cause 2 dano e, se estava oculto, obtenha prova material acessível.
+PASSAGEM CEGA   D6 1·2·4·6HELLS  Mova até 4 casas ignorando controle de passagem.    |    CÓMUM  Atravesse área vigiada com +2 em Furtividade.
+PUNHAL DO SEGREDO   D6 1·3·4·6HELLS  Cause 3 dano; +2 se alvo não o percebeu.    |    CÓMUM  Custa 1 Moral; cause 2 Incisão por Enganação, sem revelar a fonte.
+VULTO DE SERVIÇO   D6 2·3·5·6HELLS  Fique Oculto até atacar ou ser visto de perto.    |    CÓMUM  Infiltração: adversário recebe -2 Percepção para notá-lo.
+ASSINATURA FALSA   D6 1·2·5·6HELLS  Cause 2 dano e faça o alvo focar outro Searcher por 1 ataque.    |    CÓMUM  Custa 1 Moral; falsifique 1 documento menor; Percepção adversária DT 16 revela.
+EXECUÇÃO PRECISA   D6 1·2·3·5HELLS  Cause 3 dano e marque Sangramento por 2 turnos.    |    CÓMUM  Cause 3 dano físico a um único alvo; testemunhas geram suspeita.
+FORA DO REGISTRO   D6 1·3·4·5HELLS  Após atacar, mova 3 casas sem provocar reação.    |    CÓMUM  Apague vestígio menor; +2 em Enganação ao justificar sua ausência.
+ASSASSINO DE SOMBRAS   D6 1·2·4·5HELLS  Cause 5 dano em alvo isolado; se falhar no d20, sofra 1 dano.    |    CÓMUM  Cause 2 Incisão por Furtividade após revelar segredo obtido sem autorização.
+11.3 Cinco decks prontos para a primeira sessão
+Para entrar em jogo sem testar combinações ainda, pegue 2 cópias das SEIS primeiras cartas do seu Setor listadas acima (12 cartas) e 2 cópias de Passo Calculado, Defesa de Última Hora, Corte de Rotina e Primeiros Cuidados (8 cartas): 20 exatas. Isso vale para os cinco Setores. Depois do primeiro contrato, substitua cartas livremente, sempre respeitando as regras de construção. O deck de Formação é construído separadamente.
+Exemplo Incidência: 2× Linha de Choque, 2× Ombro de Ferro, 2× Primeiro na Porta, 2× Prisão de Impacto, 2× Corpo na Frente, 2× Avanço Implacável, 2× Passo Calculado, 2× Defesa de Última Hora, 2× Corte de Rotina, 2× Primeiros Cuidados.
+12. Estado físico, mente e reputação
+Vida, Sanidade, Moral e Confiança
+Medidor
+Escala
+Ao esgotar
+VIDA
+Inicial 12 (Setor altera)
+0: Caído. Socorro em até 2 rodadas ou morte.
+SANIDADE
+0–10, inicial 10
+0: colapso; perde 1 turno; depois da cena volta a 2 e recebe 1 Cicatriz.
+MORAL [Cómum]
+0–8, inicial 8
+0: não convence, não aplica Incisão social e não julga nesta cena.
+CONFIANÇA [grupo]
+0–10, inicial 6
+0: superior suspende o grupo, impõe auditoria e contrato punitivo.
+
+SANIDADE: perca 1 ao testemunhar distorção profunda, 2 por pacto cruel aceito ou 3 por quebrar seu limite pessoal. No fim de uma cena segura, cada Searcher recupera 1 Sanidade se compartilhar uma verdade ou acolher alguém; nunca acima de 10. A 6 ou menos, ouve ecos que podem enganar; a 3 ou menos, sofre -2 em sua primeira Convicção de cada cena. Cicatrizes são marcas narrativas permanentes sem penalidade cumulativa automática.
+CONFIANÇA: aumente +1 quando o grupo resolve um contrato com duas provas e sem prejudicar inocentes; -1 por absolver sistematicamente sem apurar, -1 ou -2 por fuga injustificada, -2 por sacrificar inocentes ou fraudar uma sentença. Confiança é coletiva e nunca cai por mera discordância argumentada. O narrador registra o motivo de cada variação.
+Estados breves
+Estado
+Efeito
+Exposto
+-2 Defesa contra próximo ataque; termina após ser atingido ou no próximo turno do alvo.
+Abalado
+-2 no próximo d20; some após o teste.
+Contido
+Não se move; pode gastar 1 Ação e superar DT 13 em Reflexos para romper.
+Oculto
+Primeiro ataque contra alvo desprevenido ganha +2 no d20; perde Oculto ao atacar.
+Sangramento
+Sofre 1 dano no início de dois próximos turnos; cura ou assistência remove.
+Silenciado
+Não pode usar Incisão por fala até fim do próximo turno.
+
+Hell of Fame — sua promoção é sua caçada
+A Hell of Fame é anotada INDIVIDUALMENTE. Contratos dão fama por sucesso e feitos extremos dão fama extra. A faixa de Fame define o Portão que o Searcher pode acessar, a qualidade das recompensas e a atenção de demônios rivais. O grupo usa o maior Portão entre os seus integrantes para calcular ameaças do retorno.
+Fame
+Portão / título
+Pressão de rivalidade
+0–3
+I · Antecâmara — Recruta
+Auditores observam, mas raramente atacam.
+4–7
+II · Portão do Ferro — Cobrador
+1 perseguidor a cada 2 contratos.
+8–12
+III · Portão do Vidro — Notório
+1 emboscada ou chantagem por contrato.
+13–18
+IV · Portão da Carne — Temido
+Rival de elite disputa cargo ou recompensa.
+19+
+V · Portão da Coroa — Marcado
+Caçada ativa: até os superiores tramam sua queda.
+
+RECOMPENSA DE FAME: por contrato cumprido, +1; cumprimento com provas e dificuldades relevantes, +1 adicional; aceitar atrocidade, exploração ou recompensa infernal indevida, +2 adicionais; derrotar um rival superior, +1. Nunca some mais de +4 Fame em um contrato normal. Os ganhos podem coexistir com perdas de Confiança e Sanidade; fama não significa virtude.
+Ao atravessar um novo Portão pela primeira vez, escolha UMA melhoria: +2 Vida máxima; +1 Moral máxima; +1 Sanidade máxima; +1 Movimento básico (máximo 4); ou aprimore uma Ação de seu deck adicionando um número de ativação ao d6 (máximo 4 símbolos no total). Nunca repita a mesma melhoria duas promoções seguidas.
+13. Portões e bestiário
+Os números a seguir servem para grupos de 3 Searchers. Para 2 jogadores, retire 2 Vida de cada inimigo de elite; para 4–5, acrescente um capanga e espalhe o grupo no mapa. O ataque da criatura usa d20 + bônus indicado contra Defesa do Searcher. Monstros não usam Formação, salvo descrição.
+Portão
+Atmosfera e desafio
+I — Antecâmara
+Corredores que se repetem, ecos de contratos, cobranças menores.
+II — Ferro
+Celas de nomes vivos, milícias infernais, interrogatórios reais.
+III — Vidro
+Vigilância constante, cópias dos Searchers, negociações falsificadas.
+IV — Carne
+Tribunais predatórios e disputas sangrentas entre cobradores.
+V — Coroa
+A reputação vira objeto de caça; executores podem substituir o grupo.
+
+Escrevente Sem Boca · PORTÃO I
+Vida 6; Def 11; ataque +2 / 2 dano.
+Conduta: Carimba uma Ação revelada: ela fica fora da mão por 1 rodada.
+Fraqueza / horror: Uma certidão autêntica o obriga a recuar; -1 Sanidade ao ouvi-lo escrever em sua pele.
+Cobrador de Giz · PORTÃO I
+Vida 7; Def 12; ataque +2 / 2 dano.
+Conduta: Desenha quadrados proibidos: mover-se por eles custa +1 casa.
+Fraqueza / horror: Apague o círculo principal com Investigação DT 13 para desarmar.
+Falso Confessor · PORTÃO II
+Vida 9; Def 12; ataque +3 / 3 dano.
+Conduta: Imita voz aliada e tenta fazer Searcher descartar Formação.
+Fraqueza / horror: Percepção DT 16 distingue memórias reais; falha causa Abalado.
+Cão de Selo · PORTÃO II
+Vida 10; Def 13; ataque +4 / 2 dano.
+Conduta: Uma vez por rodada salta 3 casas e imobiliza.
+Fraqueza / horror: Armadilha de contrato escrita o contém por 1 rodada.
+Vigia de Vidro · PORTÃO III
+Vida 11; Def 14; ataque +4 / 3 dano.
+Conduta: Vê cartas mascaradas antes da revelação, ganhando +2 Defesa.
+Fraqueza / horror: Quebrar espelhos da sala tira sua leitura por 1 rodada.
+Auditor de Dentes · PORTÃO III
+Vida 14; Def 14; ataque +5 / 3 dano.
+Conduta: Se um jogador tiver 0 Moral, causa +1 dano contra ele.
+Fraqueza / horror: Fraqueza: prova de corrupção de seu superior reduz Def em 2.
+Misericordioso Falso · PORTÃO III
+Vida 12; Def 13; ataque +4 / 2 dano.
+Conduta: Promete perdão fácil; Confiança -1 se grupo absolver sem prova.
+Fraqueza / horror: Um testemunho verdadeiro impede sua manipulação.
+Carniceiro de Cláusulas · PORTÃO IV
+Vida 18; Def 15; ataque +6 / 4 dano.
+Conduta: Cada contrato rasgado cura 2 Vida; cobre duas casas de alcance.
+Fraqueza / horror: Documentos originais selados impedem a cura.
+Procurador Substituto · PORTÃO IV
+Vida 17; Def 15; ataque +6 / 3 dano.
+Conduta: Copia 1 Ação aberta usada pelo Searcher mais famoso por rodada.
+Fraqueza / horror: Um ataque mascarado lido incorretamente o deixa Exposto.
+Executor da Coroa · PORTÃO V
+Vida 24; Def 16; ataque +7 / 5 dano.
+Conduta: A cada 2 turnos, bane 1 Ação da mão do líder até próxima cena.
+Fraqueza / horror: Se o grupo provar fraude na nomeação, perde 5 Vida e 2 Defesa.
+Criando inimigos humanos para o Cómum
+Testemunha acuada: Vida 6, Defesa 10, Resistência 3, Argumento DT 12. Criminoso preparado: Vida 10, Defesa 12, Resistência 6, Argumento DT 15. Pactuado importante: Vida 12, Defesa 13, Resistência 8, Argumento DT 17. Dê a cada um 1 objetivo, 1 mentira e 1 ponto de pressão que não seja violência.
+14. Contrato de exemplo: O homem dos brinquedos
+PREMISSA: Augusto Vilar vendeu a própria alma para criar a Brincatempo, uma companhia de brinquedos aclamada pelo país. O prazo do pacto venceu. O dinheiro o tornou indispensável à cidade, e há anos ele compra silêncio com bolsas, empregos e promessas. Quando os Searchers chegam, Vilar oferece “trinta crianças” como sacrifício substituto — um crime que o contrato original não autorizou. A missão não exige detalhar agressões a crianças: a ameaça, as ausências e a escolha são suficientes.
+Cena 1 — Chegada ao showroom
+Mapa sugerido: recepção (5×5), galeria de brinquedos (6×7), corredor de serviço (2×6), sala de arquivos (4×4), escritório (5×5), depósito (6×6), saída de carga (3×5). Salas conectadas por portas; corredor principal e dois acessos secretos tornam posicionamento e fuga importantes.
+SINAIS: uma gravação publicitária repete nomes que não existem no elenco; um boneco vira a cabeça apenas quando ninguém o encara; uma funcionária precisa recitar o horário exato da fundação da empresa para não ouvir batidas atrás do escritório. Ao primeiro sinal impossível, Convicção DT 13 ou -1 Sanidade.
+Cena 2 — Duas provas obrigatórias
+PROVA A: contrato original com a assinatura de Vilar, guardado no arquivo (Investigação DT 13 ou acesso por chave do escritório). A cláusula prevê apenas a alma do empresário na data de vencimento.
+PROVA B: registros de logística e ordens de transferência incompletas, no depósito (Percepção DT 16 ou testemunha persuadida DT 13). Há indícios de que inocentes estão sendo entregues a um culto como moeda de troca.
+PISTA EXTRA: o desenho de uma criança num brinquedo mostra uma porta que não aparece na planta da fábrica. Segui-la leva a um escape, não a um combate obrigatório.
+Cena 3 — Oferta do empresário
+Vilar: Vida 11, Defesa 12, Resistência 8, Argumento DT 16, ataque +3 / 2 dano; possui 2 guardas (Vida 6, Defesa 11, ataque +2 / 2). Quando sua Resistência vai a 4, ele oferece dinheiro; quando vai a 2, oferece o sacrifício. Se os Searchers recusarem, ele aciona a defesa do prédio. Cada rodada de confronto acrescenta 1 segmento ao Relógio de Fuga (4 segmentos: Vilar pode tentar escapar).
+Decisão
+Efeito narrativo e mecânico
+ACEITAR as 30 vidas como substituição
++3 Fame individual a quem autorizar; -2 Sanidade desse Searcher; -2 Confiança do grupo; ganhe 1 equipamento raro ou um favor infernal. A fraude cria caçada extra no próximo Hells.
+RECUSAR e COBRAR a alma
+Inicie confronto contra Vilar e guardas. Se vencer e concluir Julgamento: +1 Fame pelo contrato e +1 por cobrança arriscada; Confiança +1 se proteger inocentes.
+RECUSAR e NEGOCIAR entrega sem vítimas
+Use ambas as Provas, Resistência 0 e Julgamento DT 15; Vilar perde acesso às vítimas, mas pode revelar o nome do agente que mediou o pacto. +1 Fame; Confiança +1.
+FUGIR após assumir o contrato
+Os Searchers sobrevivem, mas perdem -2 Confiança. Se abandonarem inocentes já identificados, -1 Sanidade adicional para quem tinha meios reais de ajudar.
+SER DERROTADO
+Searchers a 0 Vida entram em risco de morte; sobreviventes podem ser recolhidos por um cobrador rival e começar a próxima cena no Hells como prisioneiros.
+
+Cena 4 — O retorno
+Independentemente da escolha, a fábrica deixa um vestígio: uma etiqueta “PROPRIEDADE DO INFERNO” aparece nas roupas da equipe. Se o grupo aceitar a oferta, um Auditor de Dentes os espera no Portão seguinte; se recusar e cobrar o pacto, um Escrevente Sem Boca exige prestação de contas. Se salvar as vítimas sem desviar o contrato, o grupo descobre que nem todo superior infernal tolera justiça.
+Leitura pronta para o narrador
+“No teto do escritório, os brinquedos balançam sem vento. Vilar ajusta a gravata, olha para a arma em sua mão e sorri com a paciência de quem jamais perdeu uma negociação. ‘Minha alma tem prazo, eu sei. Mas encontrei outra forma de pagar. Trinta inocentes. O Inferno não vai se importar com a diferença.’”
+15. Guia para narrar ORDER
+Estrutura de um contrato em seis passos
+1. ALVO  Quem vendeu a alma, o que comprou, e qual foi seu preço real?
+2. PRAZO  Qual evento ativa a cobrança — aniversário, falência, homicídio, assinatura?
+3. CAMADAS  Crie uma verdade inicial, uma prova escondida e uma mentira convincente.
+4. ESCOLHA  Ofereça ao menos duas saídas legítimas e uma tentação custosa.
+5. CAÇA  Ligue Fame e Confiança ao próximo inimigo ou superior.
+6. RESÍDUO  Deixe um símbolo, nome ou culpa que persista após o contrato.
+Consequência previsível, resultado incerto
+Antes de aceitar uma barganha, o jogador deve entender em termos gerais o preço: “isso pode aumentar sua Fame e reduzir a Confiança”. Não precisa saber o número exato, mas a perda não deve parecer punição inventada depois. Jamais imponha uma “resposta moral correta”; ponha escolhas em tensão e mantenha as regras estáveis.
+Horror visual que serve à decisão
+Em vez de cenas gráficas: corredores impossíveis, relógios que atrasam somente para uma pessoa, imagens de pessoas que os personagens não lembram ter conhecido, marcas de contrato sob a pele, vozes que repetem argumentos do próprio grupo. Cada efeito deve revelar algo sobre culpa, prova, poder ou perseguição.
+Provas não são Incisão
+Um alvo pode estar socialmente derrotado e ainda não ser culpado. A Incisão destrói a posição retórica; a Prova estabelece o que realmente ocorreu. O Julgamento só se torna legítimo quando o grupo enfrenta as duas dimensões.
+16. Referência rápida para a mesa
+Situação
+Regra em uma linha
+Preparar Cena
+Comprar 3 Ações e 2 Formações; juntar cartas banidas da cena anterior.
+Início de turno
+Comprar 1 Ação e 1 Formação; 1 Ação + Movimento 3 + 1 Reação.
+Ação aberta
+D6 impresso ativa; se ofensiva, d20 contra Defesa ou DT social.
+Ataque mascarado
+Carta lateral oculta → revelar no fim → alvo testa leitura d6 → d20 para acertar, 1 + arma.
+Queimar
+Banir 1 Ação da mão por +3 Movimento, 1 vez/turno.
+D20
+d20 + perícia + 2 se usar Formação + circunstância.
+Resistência social
+Ações de Incisão diminuem Resistência. 0 não é prova de culpa.
+Julgar
+2 Provas + Resistência 0/confissão + 2 Moral + Convicção vs DT 13+Portão.
+Moral 0
+Não convence nem julga nesta Cena; ao fim dela recupera 2.
+Papel e Caneta
+Vire; compre +1 Ação; só reativa no início do quarto turno a partir do uso.
+Pistola
+Ataque normal a 3 casas, 3 dano total em acerto.
+Fame
+Renome individual; define Portão, aprimoramentos e rivais.
+
+
+17. Ficha de Searcher — modelo preenchível
+IDENTIDADE
+Campo
+Preenchimento
+Nome / Nome infernal
+________________________________________________
+Idade ao morrer / Aparência
+________________________________________________
+Motivo da condenação
+________________________________________________
+Segredo / Vínculo vivo
+________________________________________________
+Setor / Passiva
+________________________________________________
+Pecado / Passiva
+________________________________________________
+Arma / Instrumento
+________________________________________________
+Fame / Portão
+_____________________  /  _____________________
+Vida / Moral / Sanidade
+________ / ________ / ________
+Defesa / Movimento
+________ / ________
+Confiança do grupo
+________ / 10
+
+PERÍCIAS — preencha bônus permanente e assinale três principais (P).
+Perícia
+Bônus
+Principal?
+Perícia
+Bônus
+Principal?
+Confronto
+_____
+[  ]
+Reflexos
+_____
+[  ]
+Investigação
+_____
+[  ]
+Percepção
+_____
+[  ]
+Persuasão
+_____
+[  ]
+Enganação
+_____
+[  ]
+Comunicação
+_____
+[  ]
+Flerte
+_____
+[  ]
+Furtividade
+_____
+[  ]
+Convicção
+_____
+[  ]
+
+CARTAS DE AÇÃO — 20 espaços. Preencha cada linha com a carta e quantidade (máximo 2).
+Nº
+Carta / Quant.
+Nº
+Carta / Quant.
+1
+________________________________
+11
+________________________________
+2
+________________________________
+12
+________________________________
+3
+________________________________
+13
+________________________________
+4
+________________________________
+14
+________________________________
+5
+________________________________
+15
+________________________________
+6
+________________________________
+16
+________________________________
+7
+________________________________
+17
+________________________________
+8
+________________________________
+18
+________________________________
+9
+________________________________
+19
+________________________________
+10
+________________________________
+20
+________________________________
+
+
+17. Ficha de Searcher — continuação
+DECK DE FORMAÇÃO — marque: 1 de cada perícia + 2 cópias de cada uma das 3 principais = 16 cartas. Invído: 13 cartas conforme passiva.
+PERÍCIAS PRINCIPAIS:  1. ___________________    2. ___________________    3. ___________________
+BANIDAS NESTA CENA:  ______________________________________________________________
+CONTADORES: Escudo ______   Sangramento ______   Sanidade ______   Moral ______   Confiança ______
+Registro de contratos
+Contrato
+Sentença
+Provas
+Fame +/-
+Consequências
+_________________
+____________
+_______
+________
+_____________________
+_________________
+____________
+_______
+________
+_____________________
+_________________
+____________
+_______
+________
+_____________________
+_________________
+____________
+_______
+________
+_____________________
+_________________
+____________
+_______
+________
+_____________________
+_________________
+____________
+_______
+________
+_____________________
+
+Dívidas que ainda respiram
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+Minhas cicatrizes
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+___________________________________________________________________________________
+Esta ficha foi desenhada para impressão. É permitido duplicá-la para uso pessoal na mesa.

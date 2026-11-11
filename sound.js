@@ -15,5 +15,5 @@ const AudioEngine=(()=>{
   }else{const osc=context.createOscillator();osc.type=type==='roll'?'triangle':'sine';osc.frequency.setValueAtTime(pitches[type]||200,now);osc.frequency.exponentialRampToValueAtTime((pitches[type]||200)*.7,now+duration);osc.connect(gain);osc.start(now);osc.stop(now+duration)}
  }
  document.addEventListener('pointerdown',unlock,{once:true});document.addEventListener('keydown',unlock,{once:true});
- return{play};
+ return{play,ctx:()=>{unlock();return context}};
 })();

@@ -1,0 +1,63 @@
+# ORDER — CRIAÇÃO VISUAL DE PERSONAGEM
+
+Crie uma ilustração de personagem para **ORDER**, um RPG de mesa de terror psicológico, investigação sobrenatural e fantasia infernal.
+
+**IMPORTANTE:** Utilize as imagens anexadas como referência obrigatória de estilo artístico, acabamento, proporções, iluminação e nível de detalhamento. Não copie os personagens apresentados, apenas a identidade visual.
+
+## IDENTIDADE ARTÍSTICA
+
+- **Estilo:** Graphic novel de terror gótico, com estética de histórias em quadrinhos adultas e estilizadas.
+- **Traços:** Contornos definidos, silhuetas marcantes, formas angulares e sombras pretas profundas.
+- **Colorização:** Pintura digital com cel shading sofisticado, contrastes dramáticos e áreas de sombra bem delimitadas.
+- **Paleta:** Preto, vinho, bordô, marrom, rosa envelhecido e tons dessaturados. Outras cores são permitidas quando combinarem com o personagem.
+- **Iluminação:** Cinematográfica, com luz lateral intensa, reflexos sutis e sombras expressivas.
+- **Anatomia:** Proporções humanas adultas e estilizadas, sem exageros cartunescos.
+- **Vestuário:** Roupas com tecidos bem definidos, dobras angulares, acessórios detalhados e personalidade visual própria.
+- **Atmosfera:** Sombria, misteriosa, elegante e ameaçadora, sem perder a individualidade do personagem.
+
+## COMPOSIÇÃO OBRIGATÓRIA
+
+1. Personagem de corpo inteiro, da cabeça aos pés, sem cortes.
+2. Pose natural, expressiva e condizente com sua personalidade.
+3. Enquadramento vertical, proporção 2:3.
+4. Personagem centralizado, ocupando a maior parte da imagem.
+5. **Fundo 100% transparente (PNG com canal alfa verdadeiro).**
+6. Sem cenário, chão, molduras, títulos, textos ou logotipos.
+7. Todos os acessórios, armas e efeitos sobrenaturais devem permanecer dentro do enquadramento.
+8. O resultado deve parecer uma ilustração oficial de personagem de um RPG de terror, e não uma fotografia, renderização 3D ou desenho de anime genérico.
+
+## INFORMAÇÕES DO MEU PERSONAGEM
+
+**Nome:** [Nome]
+
+**Idade aparente:** [Idade]
+
+**Gênero e aparência:** [Descrição física]
+
+**Cabelo:** [Cor, corte e penteado]
+
+**Olhos:** [Cor e características]
+
+**Personalidade:** [Personalidade, expressão e postura]
+
+**Roupas:** [Descrição completa]
+
+**Acessórios e equipamentos:** [Armas, objetos, joias etc.]
+
+**Setor de ORDER:** [Incidência / Relação / Justiça / Socialista / Doutrina]
+
+**Pecado cometido em vida:** [Descrição]
+
+**Detalhes sobrenaturais:** [Marcas, cicatrizes, manifestações infernais etc.]
+
+**Pose desejada:** [Descrição]
+
+## REGRAS FINAIS
+
+A aparência deve contar visualmente a história do personagem, especialmente seus pecados, sua personalidade e sua relação com o Inferno.
+
+Não transformar todos os personagens em demônios. A aparência humana deve ser preservada, exceto quando solicitado.
+
+Não adicionar elementos que descaracterizem a descrição fornecida.
+
+**Prioridade máxima:** fidelidade às referências artísticas, consistência visual com ORDER, corpo inteiro e fundo realmente transparente.

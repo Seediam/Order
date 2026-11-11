@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-07T21:56:56.780Z",
+  "browser": "158.0.8127.18",
+  "checks": [
+    {
+      "name": "01 Olho aberto sem deformação",
+      "passed": true,
+      "detail": {
+        "x": 507.3333435058594,
+        "y": 255.216796875,
+        "width": 351.3332824707031,
+        "height": 157.01708984375
+      }
+    },
+    {
+      "name": "02 Pupila segue o mouse",
+      "passed": true,
+      "detail": {
+        "pupil": "matrix(1, 0, 0, 1, -3.97291, -2.95833)",
+        "pupil2": "matrix(1, 0, 0, 1, 3.4063, 2.25)"
+      }
+    },
+    {
+      "name": "03 Clique anima abertura real",
+      "passed": true
+    },
+    {
+      "name": "04 Letras ORDER em sequência",
+      "passed": true,
+      "detail": [
+        {
+          "delay": "0s",
+          "opacity": "0"
+        },
+        {
+          "delay": "0.16s",
+          "opacity": "0"
+        },
+        {
+          "delay": "0.32s",
+          "opacity": "0"
+        },
+        {
+          "delay": "0.48s",
+          "opacity": "0"
+        },
+        {
+          "delay": "0.64s",
+          "opacity": "0"
+        }
+      ]
+    },
+    {
+      "name": "05 Digitação cresce gradualmente",
+      "passed": true,
+      "detail": {
+        "length1": 3,
+        "length2": 12
+      }
+    },
+    {
+      "name": "08 Respostas bloqueadas até terminar",
+      "passed": true
+    },
+    {
+      "name": "Som não reinicia a digitação",
+      "passed": true
+    },
+    {
+      "name": "09 Respiração com valores intermediários",
+      "passed": true,
+      "detail": {
+        "t1": "matrix(1.00061, 0, 0, 1.00122, 0, 1.29022)",
+        "t2": "matrix(1.00389, 0, 0, 1.00777, 0, -2.53363)"
+      }
+    },
+    {
+      "name": "10 Luz do personagem ativo",
+      "passed": true,
+      "detail": {
+        "active": "brightness(0.76) saturate(0.6)",
+        "listening": "brightness(0.48) saturate(0.7)"
+      }
+    },
+    {
+      "name": "06 Primeiro clique completa a frase",
+      "passed": true
+    },
+    {
+      "name": "07 Segundo clique avança",
+      "passed": true
+    },
+    {
+      "name": "11 Iluminação pisca",
+      "passed": true,
+      "detail": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.0632257,
+        0.0917197,
+        0.165332,
+        0.210579,
+        0.318112,
+        0.380375,
+        0.521583,
+        0.600274,
+        0.772843,
+        0.731946,
+        0.527365,
+        0.419691,
+        0.196278,
+        0.0817541,
+        0.270903,
+        0.36694,
+        0.555935,
+        0.647826,
+        0.536644,
+        0.482309,
+        0.380848,
+        0.334156,
+        0.249636,
+        0.177154,
+        0.14562,
+        0.117255,
+        0.069954,
+        0.0510195,
+        0.0223213,
+        0.0124508,
+        0.00135795
+      ]
+    },
+    {
+      "name": "12 Fade escurece e revela",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "13 Token passa por posição intermediária",
+      "passed": true,
+      "detail": {
+        "initial": {
+          "x": 376.953125,
+          "y": 369.453125,
+          "width": 42,
+          "height": 42
+        },
+        "intermediate": {
+          "x": 405.1875,
+          "y": 369.453125,
+          "width": 42,
+          "height": 42
+        }
+      }
+    },
+    {
+      "name": "14 Caminhada atualiza quadrado a quadrado",
+      "passed": true
+    },
+    {
+      "name": "18 Hover levanta a carta",
+      "passed": true,
+      "detail": {
+        "normal": {
+          "x": 625,
+          "y": 588,
+          "width": 116,
+          "height": 168
+        },
+        "hover": {
+          "x": 618.0399780273438,
+          "y": 549.823974609375,
+          "width": 129.91998291015625,
+          "height": 188.1600341796875
+        }
+      }
+    },
+    {
+      "name": "15 HUD em 1920x1080 e 1366x768, também 390x844",
+      "passed": true
+    },
+    {
+      "name": "16 Sem scroll externo nas três mesas",
+      "passed": true
+    },
+    {
+      "name": "17 Mão sobre a borda inferior do tabuleiro",
+      "passed": true
+    },
+    {
+      "name": "19 Todas as cartas respeitam resultados válidos do D6",
+      "passed": true
+    },
+    {
+      "name": "Painel de desenvolvimento restrito",
+      "passed": true
+    },
+    {
+      "name": "Movimento reduzido mantém o olho e título íntegros",
+      "passed": true
+    },
+    {
+      "name": "Oito registros encontrados pela investigação",
+      "passed": true
+    },
+    {
+      "name": "Confronto e comparação antes do julgamento",
+      "passed": true
+    },
+    {
+      "name": "20 Três encontros solo vencidos pela Pistola real",
+      "passed": true,
+      "detail": [
+        {
+          "route": "collect",
+          "title": "Contrato encerrado.",
+          "trust": 8,
+          "rounds": 27,
+          "hp": 20
+        },
+        {
+          "route": "mercy",
+          "title": "Elvira continua na Terra.",
+          "trust": 9,
+          "rounds": 34,
+          "hp": 16
+        },
+        {
+          "route": "defer",
+          "title": "Uma noite a mais.",
+          "trust": 9,
+          "rounds": 44,
+          "hp": 10
+        }
+      ]
+    },
+    {
+      "name": "21 Julgamentos têm consequências distintas",
+      "passed": true,
+      "detail": [
+        {
+          "route": "collect",
+          "title": "Contrato encerrado.",
+          "trust": 8,
+          "rounds": 27,
+          "hp": 20
+        },
+        {
+          "route": "mercy",
+          "title": "Elvira continua na Terra.",
+          "trust": 9,
+          "rounds": 34,
+          "hp": 16
+        },
+        {
+          "route": "defer",
+          "title": "Uma noite a mais.",
+          "trust": 9,
+          "rounds": 44,
+          "hp": 10
+        }
+      ]
+    },
+    {
+      "name": "22 Nenhum erro crítico no Console ou asset ausente",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

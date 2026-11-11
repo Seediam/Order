@@ -1,3 +1,15 @@
 tests/node_modules/
 _site/
 tests/evidence/video/
+# segredos e dados locais
+.env
+**/.env
+# arquivos grandes demais para o GitHub (limite de 100 MB) ou redundantes
+assets.rar
+Fonts.rar
+# dependências e builds
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.claude/

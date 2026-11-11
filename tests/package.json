@@ -1,0 +1,13 @@
+{
+  "name": "order-browser-tests",
+  "private": true,
+  "scripts": {
+    "test": "node run.cjs",
+    "balance": "node balance.cjs",
+    "systems": "node systems.cjs",
+    "record": "node record.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}

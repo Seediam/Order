@@ -1,0 +1,8 @@
+{
+  "simulations": 2000,
+  "wins": 2000,
+  "winRate": 1,
+  "averageRounds": 27.3895,
+  "minRemainingHp": 3,
+  "strategy": "Pistola sem cartas, sem cura e sem bônus de Setor; sai da área anunciada."
+}

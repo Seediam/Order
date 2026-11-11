@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Iluminação pisca",
+    "passed": true,
+    "detail": 0.448276
+  },
+  {
+    "name": "Fade escurece e retorna",
+    "passed": true,
+    "detail": 0.735851
+  },
+  {
+    "name": "Movimento com posição intermediária",
+    "passed": true,
+    "detail": {
+      "initial": {
+        "x": 376.953125,
+        "y": 272.203125,
+        "width": 42,
+        "height": 40.5625
+      },
+      "middle": {
+        "x": 397.75,
+        "y": 271.484375,
+        "width": 42,
+        "height": 42
+      }
+    }
+  },
+  {
+    "name": "Posição avança por quadrado",
+    "passed": true
+  },
+  {
+    "name": "Destino final e custo corretos",
+    "passed": true
+  },
+  {
+    "name": "Console sem erros",
+    "passed": true,
+    "detail": []
+  }
+]

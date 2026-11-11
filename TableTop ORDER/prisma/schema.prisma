@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+model User {
+  id String @id @default(uuid())
+  username String @unique
+  displayName String
+  passwordHash String
+  role String
+  avatar String @default("")
+  createdAt DateTime @default(now())
+  sessions AuthSession[]
+  memberships Membership[]
+}
+model AuthSession {
+  id String @id
+  userId String
+  expiresAt DateTime
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+model Campaign {
+  id String @id @default(uuid())
+  name String
+  description String
+  banner String @default("")
+  ownerId String
+  state String
+  revision Int @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  members Membership[]
+}
+model Membership {
+  campaignId String
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  campaign Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  @@id([campaignId, userId])
+}
+model Asset {
+  id String @id @default(uuid())
+  ownerId String
+  name String
+  category String
+  mime String
+  filename String
+  thumbnail String @default("")
+  size Int
+  createdAt DateTime @default(now())
+}
+model Setting {
+  key String @id
+  value String
+}

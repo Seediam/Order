@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c10">
+  <meta name="description" content="ORDER — O Pecado da Misericórdia. Prólogo solo de investigação, julgamento e combate com cartas.">
+  <title>ORDER — O Pecado da Misericórdia</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/web/map-igreja.webp" as="image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="frame"><div id="app" aria-live="polite"></div><div id="modal-root"></div></div>
+  <noscript><div style="color:white;font-family:Arial,sans-serif;text-align:center;padding:3rem">Ative o JavaScript no navegador para iniciar o ORDER.</div></noscript>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="cinema-light" aria-hidden="true"></div>
+  <div id="cinema-fade" aria-hidden="true"></div>
+  <div class="sanity-veil" aria-hidden="true"></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <filter id="paperCut" x="-25%" y="-15%" width="150%" height="130%"><feMorphology in="SourceAlpha" operator="dilate" radius="3" result="d"/><feFlood flood-color="#f4ece0" result="w"/><feComposite in="w" in2="d" operator="in" result="outline"/><feOffset in="d" dx="5" dy="4" result="off"/><feFlood flood-color="#000" flood-opacity=".5"/><feComposite in2="off" operator="in" result="shadow"/><feMerge><feMergeNode in="shadow"/><feMergeNode in="outline"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="paperGrain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .95  0 0 0 .1 0" result="g"/><feComposite in="g" in2="SourceGraphic" operator="in" result="gi"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="gi"/></feMerge></filter>
+  </defs></svg>
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <form method="dialog"><h2 id="settings-title">Configurações</h2>
+      <label for="volume">Volume dos efeitos</label><input id="volume" type="range" min="0" max="1" step="0.05" value="0.45">
+      <label for="text-speed">Intervalo entre letras</label><input id="text-speed" type="range" min="10" max="65" value="28"><small>Menor intervalo: digitação mais rápida.</small>
+      <label class="check"><input id="dice-anim" type="checkbox" checked> Animar dados 3D</label>
+      <label for="music-volume">Volume da música</label><input id="music-volume" type="range" min="0" max="1" step="0.05" value="0.35">
+      <label class="check"><input id="motion-full" type="checkbox" checked> Animações (deslize dos tokens, chuva, títulos)</label>
+      <button class="btn btn-primary">VOLTAR AO JOGO</button>
+    </form>
+  </dialog>
+  <script>
+    function showStartupError(message){const panel=document.createElement('div');panel.className='startup-error';panel.setAttribute('role','alert');panel.innerHTML='<h1>ORDER encontrou uma falha</h1><p></p><p>Mantenha index.html, os arquivos JavaScript, style.css, Fonts e assets na mesma pasta e recarregue a página.</p>';panel.querySelector('p').textContent=message;document.body.append(panel)}
+    window.addEventListener('error',e=>{if(e.message)showStartupError(e.message);else if(e.target&&e.target.tagName==='SCRIPT')showStartupError('Não foi possível carregar '+e.target.getAttribute('src'))},true);
+    window.addEventListener('unhandledrejection',e=>showStartupError(String(e.reason&&e.reason.message||e.reason)));
+  </script>
+  <script src="animations.js" defer></script>
+  <script src="sound.js" defer></script>
+  <script src="ambience.js" defer></script>
+  <script src="card-art.js" defer></script>
+  <script src="dice3d.js" defer></script>
+  <script src="cards.js" defer></script>
+  <script src="story.js" defer></script>
+  <script src="investigation.js" defer></script>
+  <script src="combat-rules.js" defer></script>
+  <script src="board.js" defer></script>
+  <script src="battle-fx.js" defer></script>
+  <script src="dev.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

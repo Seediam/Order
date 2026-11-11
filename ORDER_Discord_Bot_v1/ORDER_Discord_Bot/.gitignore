@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+data/*.sqlite3
+data/*.sqlite3-*
+
+.venv/
+logs/
+data/bot.pid
+data/portraits/
+previews/
+data/server_setup.json
+data/server_structure_before.json

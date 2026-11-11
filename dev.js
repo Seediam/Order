@@ -1,23 +1,10 @@
-/* Controls exist only on loopback with ?dev=1. Preview links never write campaign saves. */
+/* Laboratório: só em localhost com ?dev=1. Prévias não gravam a campanha. */
 'use strict';
 function mountDevPanel(){
  if(!DEV_MODE||document.getElementById('dev-panel'))return;
  const panel=document.createElement('details');panel.id='dev-panel';
- panel.innerHTML='<summary>LAB · ANIMAÇÕES</summary><div>'+['Olho','Digitação','Respiração','Iluminação','Fade','Caminhada','Compra','Transformação','Terror','Ataque','Dano'].map((label,i)=>`<button type="button" data-demo="${i}">${label}</button>`).join('')+'</div>';
+ const items=[['Olho',()=>{S.stage='intro';S.introOpened=false;render()}],['Ficha',()=>{S.stage='class';render()}],['Tabuleiro',()=>{if(!S.board)initBoard();S.stage='explore';render()}],['Visual Novel',()=>{S.stage='vn';S.node='welcome';render()}],['Combate',()=>{S.flags.route='collect';startBattle()}],['D20',()=>Dice3D.roll([{sides:20,value:1+Math.floor(Math.random()*20)}],{title:'Teste'})],['D6',()=>Dice3D.roll([{sides:6,value:1+Math.floor(Math.random()*6)}],{title:'Teste'})],['Terror',()=>Cinematics.playHorrorEvent()],['−Sanidade',()=>{changeSanity(-2);render()}],['Presença',()=>{if(S.board){S.board.presence={pos:[...S.board.pos],wait:0};presenceEncounter()}}]];
+ panel.innerHTML='<summary>LAB</summary><div>'+items.map(([l],i)=>`<button type="button" data-demo="${i}">${l}</button>`).join('')+'</div>';
  document.body.append(panel);
- panel.addEventListener('click',async e=>{const b=e.target.closest('[data-demo]');if(!b||Cinematics.busy)return;
-  switch(Number(b.dataset.demo)){
-   case 0:S.stage='intro';S.introOpened=false;render();break;
-   case 1:case 2:S.stage='vn';S.node='welcome';render();break;
-   case 3:await Cinematics.playLightFlicker();break;
-   case 4:await Cinematics.fadeToBlack();await Cinematics.fadeFromBlack();break;
-   case 5:S.stage='combat';S.combat=initialCombat();render();move(3,2);break;
-   case 6:if(S.stage!=='combat'||S.combat.hand.length>=7){S.stage='combat';S.combat=initialCombat()}drawCard(S.combat);render();break;
-   case 7:S.stage='vn';S.node='hell4';render();await Cinematics.transformation();break;
-   case 8:await Cinematics.playHorrorEvent();break;
-   case 9:S.stage='combat';S.combat=initialCombat();S.combat.boss={x:3,y:2};S.combat.bossHp-=2;render();await BattleFX.cast(()=>combatToken('player'),()=>combatToken('boss'),{kind:'attack',amount:2,hit:true});break;
-   case 10:if(S.stage!=='combat'){S.stage='combat';S.combat=initialCombat()}S.combat.hp=Math.max(1,S.combat.hp-2);render();BattleFX.damage(()=>combatToken('player'),2);break;
-  }
- });
+ panel.addEventListener('click',e=>{const b=e.target.closest('[data-demo]');if(b)items[Number(b.dataset.demo)][1]()});
 }
-document.addEventListener('input',e=>{if(e.target.id==='volume'){S.volume=Number(e.target.value);persist()}if(e.target.id==='text-speed'){S.textSpeed=Number(e.target.value);persist()}});
