@@ -201,7 +201,7 @@ async function act(a,v){
   case'go-create':return goCreate();
   case'step':S.step=Number(v);break;
   case'body':S.profile.body=v;S.step=1;Sound.paper();break;
-  case'album-sector':S.albumSector=v;Sound.paper();break;
+  case'album-sector':S.albumSector=v;Sound.paper();if(innerWidth<760)setTimeout(()=>document.querySelector('.sector-page')?.scrollIntoView({behavior:'smooth',block:'start'}),60);break;
   case'choose-sector':S.profile.sector=S.albumSector;S.step=2;break;
   case'sin':syncForm();S.profile.sin=v;break;
   case'skill':{syncForm();const k=S.profile.skills,i=k.indexOf(v);if(i>=0)k.splice(i,1);else if(k.length<2)k.push(v);else{toast('Escolha só duas perícias. Desmarque uma antes.');return}break}

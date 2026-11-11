@@ -429,3 +429,35 @@ body.hells #app{background:radial-gradient(ellipse at 50% 40%,#4a0f24,#14050c 60
 .spread-r .phead{justify-items:end}
 .sfx.at-tr{right:9%;top:9%}.sfx.at-br{right:9%;bottom:11%}.sfx.at-bl{left:9%;bottom:11%}
 .pbig b{font-size:min(calc(var(--ph)*.062),calc(100cqw / var(--n)),18cqh)}
+/* celular: telas do álbum roláveis, topo sem sobreposição */
+@media (max-width:760px){
+ .hud{gap:8px;padding:0 10px;height:52px}
+ .hud-title{display:none}
+ .hud-logo img{height:24px}
+ .hud nav{gap:4px}.hud nav button{min-height:34px;padding:0 7px;font-size:10px}
+ .album-screen{inset:52px 0 0;display:block;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:10px 10px 90px}
+ .album-steps{position:static;transform:none;flex-wrap:wrap;justify-content:center;gap:4px;margin:0 0 8px}
+ .album-steps li{padding:4px 7px;font-size:9px;letter-spacing:.08em}
+ .album{width:100%;height:auto;margin:0;overflow:visible;filter:none}
+ .album-page{flex:none;overflow:visible;padding:18px 14px}
+ .album-page.left{border-radius:6px 6px 0 0}.album-page.right{border-radius:0 0 6px 6px}
+ .pol-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px}
+ .pol-grid .polaroid{width:auto!important;max-width:100%}
+ .pol-row{flex-wrap:wrap;justify-content:center;gap:14px}
+ .pol-row .polaroid{width:min(42vw,170px)!important}
+ .sector-page{flex-direction:column;align-items:center;scroll-margin-top:8px}
+ .sector-page .polaroid.big{width:min(62vw,240px)!important}
+ .sector-text{text-align:left}
+ .id-photo .polaroid.big{width:min(60vw,230px)!important;margin:0 auto}
+ .dossier{padding:16px 12px}
+ .chips{flex-wrap:wrap}
+ .back-step{position:static;display:block;margin:14px auto 0}
+ .album-screen .btn.big{width:100%}
+ .modal-wrap .modal,.modal{max-width:calc(100vw - 20px);max-height:calc(100dvh - 30px);overflow:auto}
+}
+@media (max-width:760px){
+ .pol-grid .polaroid.small .photo{width:100%}
+ .pol-grid .polaroid{padding:5px 5px 8px}.pol-grid .polaroid b{font-size:10px}
+ .pol-row .polaroid.tall .photo{width:min(40vw,160px);height:auto}
+ .polaroid.big .photo{width:min(58vw,230px)}
+}
